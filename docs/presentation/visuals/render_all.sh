@@ -24,7 +24,7 @@ diagrams=(
 
 # Render behavioral system separately (different filename)
 echo "Rendering 01_behavioral_system.png (3-layer system)..."
-mmdc -i 01_intelligence_cycle.mmd -o renders/01_behavioral_system.png -w 1920 -H 1080 -b transparent
+mmdc -i 01_intelligence_cycle.mmd -o renders/01_behavioral_system.png -w 3200 -H 700 -b transparent
 echo "  Done: renders/01_behavioral_system.png"
 echo ""
 
@@ -38,6 +38,9 @@ for diagram in "${diagrams[@]}"; do
     # VNC control needs custom CSS for thicker lines and wider horizontal layout
     elif [ "$diagram" = "04_vnc_control" ]; then
         mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 2400 -H 800 -b transparent -C vnc-custom.css
+    # Intelligence cycle (3-layer system) needs wider format
+    elif [ "$diagram" = "01_intelligence_cycle" ]; then
+        mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 3200 -H 700 -b transparent
     else
         mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 1920 -H 1080 -b transparent
     fi

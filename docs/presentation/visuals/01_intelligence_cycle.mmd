@@ -1,11 +1,11 @@
-%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'28px', 'fontFamily':'Lato, sans-serif', 'lineColor':'#666666', 'edgeLabelBackground':'#ffffff'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'22px', 'fontFamily':'Lato, sans-serif', 'lineColor':'#666666', 'edgeLabelBackground':'#ffffff'}, 'flowchart': {'nodeSpacing': 80, 'rankSpacing': 180, 'padding': 25}}}%%
 
 graph LR
-    A["<b>CAPA 3: NARRATIVAS AI</b><br/><br/>GPT/Claude genera planes<br/><br/>Ejemplo:<br/>Rutina manana: revisar notificaciones<br/>navegar feed 15min, ver 2-3 videos"]
+    A["<b>CAPA 3: NARRATIVAS AI</b><br/><br/>GPT/Claude genera planes<br/><br/>Ejemplo: Rutina mañana - revisar notificaciones, navegar feed 15min, ver 2-3 videos"]
 
-    B["<b>CAPA 2: PRIMITIVAS COMPORTAMENTALES</b><br/><br/>Bloques reutilizables<br/><br/>browse_feed duration engagement_rate<br/>search_for_topic query depth<br/>watch_content category session_length"]
+    B["<b>CAPA 2: PRIMITIVAS COMPORTAMENTALES</b><br/><br/>Bloques reutilizables de comportamiento<br/><br/>browse_feed(duration, engagement_rate)<br/>search_for_topic(query, depth)<br/>watch_content(category, session_length)"]
 
-    C["<b>CAPA 1: ACCIONES ATOMICAS</b><br/><br/>Movimientos precisos<br/><br/>scroll speed duration<br/>click selector delay<br/>type text typing_speed error_rate"]
+    C["<b>CAPA 1: ACCIONES ATOMICAS</b><br/><br/>Movimientos precisos con variacion<br/><br/>scroll(speed, duration)<br/>click(selector, delay)<br/>type(text, typing_speed, error_rate)"]
 
     A ==>|"AI traduce"| B
     B ==>|"Codigo ejecuta"| C
@@ -13,6 +13,6 @@ graph LR
     linkStyle 0 stroke:#666666,stroke-width:4px
     linkStyle 1 stroke:#666666,stroke-width:4px
 
-    style A fill:#5B5FED,stroke:#4A4DDB,stroke-width:5px,color:#fff,rx:15,ry:15
-    style B fill:#FF7F6A,stroke:#FF6B52,stroke-width:5px,color:#fff,rx:15,ry:15
-    style C fill:#5B5FED,stroke:#4A4DDB,stroke-width:5px,color:#fff,rx:15,ry:15
+    style A fill:#5B5FED,stroke:#4A4DDB,stroke-width:5px,color:#fff,rx:15,ry:15,min-width:400px
+    style B fill:#FF7F6A,stroke:#FF6B52,stroke-width:5px,color:#fff,rx:15,ry:15,min-width:450px
+    style C fill:#5B5FED,stroke:#4A4DDB,stroke-width:5px,color:#fff,rx:15,ry:15,min-width:400px

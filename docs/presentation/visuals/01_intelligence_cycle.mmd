@@ -1,13 +1,15 @@
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#5B5FED','primaryTextColor':'#fff','primaryBorderColor':'#4A4DDB','lineColor':'#5B5FED','secondaryColor':'#F8F9FA','tertiaryColor':'#E8EAED','fontSize':'16px'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'28px', 'fontFamily':'Lato, sans-serif'}}}%%
 
 graph LR
-    A[Persona<br/>Comporta] -->|realista y<br/>coherente| B[Plataforma<br/>Targetea]
-    B -->|anuncios<br/>específicos| C[Capturamos<br/>Datos]
-    C -->|patrones y<br/>señales| D[Analizamos<br/>Targeting]
-    D -->|insights<br/>accionables| E[Inteligencia<br/>para Clientes]
+    A["<b>CAPA 3: NARRATIVAS AI</b><br/><br/>GPT/Claude genera planes<br/><br/>Ejemplo:<br/>Rutina manana: revisar notificaciones<br/>navegar feed 15min, ver 2-3 videos"]
 
-    style A fill:#5B5FED,stroke:#4A4DDB,stroke-width:2px,color:#fff
-    style B fill:#E8EAED,stroke:#5B5FED,stroke-width:2px,color:#333
-    style C fill:#5B5FED,stroke:#4A4DDB,stroke-width:2px,color:#fff
-    style D fill:#E8EAED,stroke:#5B5FED,stroke-width:2px,color:#333
-    style E fill:#5B5FED,stroke:#4A4DDB,stroke-width:2px,color:#fff
+    B["<b>CAPA 2: PRIMITIVAS COMPORTAMENTALES</b><br/><br/>Bloques reutilizables<br/><br/>browse_feed duration engagement_rate<br/>search_for_topic query depth<br/>watch_content category session_length"]
+
+    C["<b>CAPA 1: ACCIONES ATOMICAS</b><br/><br/>Movimientos precisos<br/><br/>scroll speed duration<br/>click selector delay<br/>type text typing_speed error_rate"]
+
+    A -->|"AI traduce"| B
+    B -->|"Codigo ejecuta"| C
+
+    style A fill:#5B5FED,stroke:#4A4DDB,stroke-width:5px,color:#fff,rx:15,ry:15
+    style B fill:#FF7F6A,stroke:#FF6B52,stroke-width:5px,color:#fff,rx:15,ry:15
+    style C fill:#5B5FED,stroke:#4A4DDB,stroke-width:5px,color:#fff,rx:15,ry:15

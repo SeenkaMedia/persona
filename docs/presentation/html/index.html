@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persona - Sistema de Inteligencia de Panel Automatizado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #5B5FED;
+            --secondary-color: #FF7F6A;
+            --background: #FFFFFF;
+            --text-dark: #1a1a2e;
+            --text-light: #6B7280;
+            --border-light: #E5E7EB;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--background);
+            color: var(--text-dark);
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            padding: 80px 120px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        /* Header styling */
+        .slide-header {
+            position: absolute;
+            top: 40px;
+            left: 120px;
+            right: 120px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Title slide */
+        .title-slide {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #4347cc 100%);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .title-slide .logo {
+            color: white;
+            font-size: 48px;
+            margin-bottom: 60px;
+        }
+
+        .title-slide h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .title-slide .subtitle {
+            font-size: 32px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        /* Content slides */
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 60px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+        }
+
+        .content {
+            font-size: 24px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            max-width: 1200px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .content li {
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .content li::before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        .content strong {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .content em {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Icon grid for capabilities */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .pillar-item {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 16px;
+            background: #F9FAFB;
+            transition: transform 0.2s;
+        }
+
+        .pillar-item:hover {
+            transform: translateY(-5px);
+            background: #F3F4F6;
+        }
+
+        .pillar-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+
+        .pillar-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        /* Diagram images */
+        .diagram {
+            max-width: 100%;
+            max-height: 60vh;
+            margin: 40px auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* Navigation */
+        .navigation {
+            position: fixed;
+            bottom: 40px;
+            right: 120px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .nav-button {
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--primary-color);
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .nav-button:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .slide-counter {
+            font-size: 16px;
+            color: var(--text-light);
+            margin: 0 15px;
+            font-weight: 400;
+        }
+
+        /* Speaker notes */
+        .speaker-notes {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 46, 0.95);
+            color: white;
+            padding: 30px 120px;
+            max-height: 40vh;
+            overflow-y: auto;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 200;
+        }
+
+        .speaker-notes.visible {
+            transform: translateY(0);
+        }
+
+        .speaker-notes h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .speaker-notes p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .speaker-notes ul {
+            margin-left: 20px;
+        }
+
+        .speaker-notes li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        /* Help overlay */
+        .help-overlay {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(26, 26, 46, 0.9);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            z-index: 300;
+        }
+
+        .help-overlay.visible {
+            opacity: 1;
+        }
+
+        .help-overlay kbd {
+            background: var(--primary-color);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 0 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+
+        <!-- Slide 1: Title -->
+        <section class="slide active title-slide" data-slide="1">
+            <div class="logo">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="currentColor">
+                    <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                </svg>
+                seenka
+            </div>
+            <h1>Persona</h1>
+            <p class="subtitle">Sistema de Inteligencia de Panel Automatizado</p>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Introducción: Esta es una presentación conversacional sobre el proyecto Persona. Es importante mantener un tono colaborativo y estar preparado para hacer handoffs con Diego y Zaca si presentan primero.</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: Agenda -->
+        <section class="slide" data-slide="2">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Hoy queremos conversar sobre:</h1>
+            <div class="content">
+                <ul>
+                    <li><strong>Contexto:</strong> ¿Qué estamos construyendo?</li>
+                    <li><strong>Capacidades:</strong> ¿Cómo lo hacemos técnicamente?</li>
+                    <li><strong>Ejecución:</strong> ¿Cómo avanzamos?</li>
+                </ul>
+                <p style="margin-top: 60px;"><em>Esto es una conversación - preguntas en cualquier momento</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Establecer el tono conversacional desde el inicio. Enfatizar que queremos su input, no solo presentar conclusiones.</p>
+            </div>
+        </section>
+
+        <!-- Slide 3: El Desafío y el Valor -->
+        <section class="slide" data-slide="3">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>El Desafío y el Valor</h1>
+            <div class="content">
+                <p><strong>No es solo automatización...</strong></p>
+                <ul>
+                    <li>Es simulación de comportamiento humano realista</li>
+                    <li>Coherencia cross-platform</li>
+                    <li>Digital footprint auténtico</li>
+                    <li>Anti-detección sofisticada</li>
+                </ul>
+                <p style="margin-top: 40px;"><strong>El valor único: Investigación de algoritmos</strong></p>
+                <ul>
+                    <li>No solo QUÉ ads se muestran</li>
+                    <li>Sino POR QUÉ este perfil los recibe</li>
+                    <li>Reverse-engineering de targeting</li>
+                </ul>
+                <p style="margin-top: 40px;"><em>¿Estoy entendiendo correctamente la visión?</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Validar que entendiste correctamente la visión del proyecto. Mencionar que técnicamente esto requiere más que simple scraping - es ciencia comportamental.</p>
+                <p>Estar preparado para discutir: ¿Qué es más valioso: datos crudos o insights de targeting?</p>
+            </div>
+        </section>
+
+        <!-- Slide 4: Capacidades - Intro (5 Pillars) -->
+        <section class="slide" data-slide="4">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>5 Pilares Técnicos Necesarios</h1>
+            <div class="pillar-grid">
+                <div class="pillar-item">
+                    <svg class="pillar-icon" viewBox="0 0 100 100" fill="none">
+                        <circle cx="50" cy="35" r="15" fill="#5B5FED"/>
+                        <path d="M 50 52 C 30 52, 20 65, 20 80 L 80 80 C 80 65, 70 52, 50 52" fill="#5B5FED"/>
+                        <path d="M 35 42 Q 30 50, 25 55" stroke="#FF7F6A" stroke-width="3" fill="none"/>
+                        <path d="M 65 42 Q 70 50, 75 55" stroke="#FF7F6A" stroke-width="3" fill="none"/>
+                        <circle cx="25" cy="55" r="3" fill="#FF7F6A"/>
+                        <circle cx="75" cy="55" r="3" fill="#FF7F6A"/>
+                    </svg>
+                    <div class="pillar-title">Realismo<br>Comportamental</div>
+                </div>
+                <div class="pillar-item">
+                    <svg class="pillar-icon" viewBox="0 0 100 100" fill="none">
+                        <rect x="20" y="30" width="60" height="40" rx="4" fill="#5B5FED"/>
+                        <rect x="30" y="40" width="15" height="12" fill="white"/>
+                        <rect x="55" y="40" width="15" height="12" fill="white"/>
+                        <rect x="30" y="55" width="15" height="12" fill="#FF7F6A"/>
+                        <rect x="55" y="55" width="15" height="12" fill="#FF7F6A"/>
+                        <circle cx="50" cy="20" r="3" fill="#5B5FED"/>
+                        <line x1="50" y1="23" x2="50" y2="30" stroke="#5B5FED" stroke-width="2"/>
+                    </svg>
+                    <div class="pillar-title">Infraestructura</div>
+                </div>
+                <div class="pillar-item">
+                    <svg class="pillar-icon" viewBox="0 0 100 100" fill="none">
+                        <circle cx="50" cy="50" r="30" stroke="#5B5FED" stroke-width="4" fill="none"/>
+                        <circle cx="50" cy="50" r="5" fill="#5B5FED"/>
+                        <line x1="50" y1="50" x2="70" y2="35" stroke="#5B5FED" stroke-width="3"/>
+                        <circle cx="70" cy="35" r="8" fill="#FF7F6A"/>
+                        <path d="M 62 35 L 67 40 L 78 27" stroke="white" stroke-width="2" fill="none"/>
+                    </svg>
+                    <div class="pillar-title">Investigación<br>de Algoritmos</div>
+                </div>
+                <div class="pillar-item">
+                    <svg class="pillar-icon" viewBox="0 0 100 100" fill="none">
+                        <rect x="25" y="30" width="50" height="35" rx="3" fill="#5B5FED"/>
+                        <rect x="30" y="35" width="40" height="25" fill="#E8F0FF"/>
+                        <circle cx="50" cy="75" r="12" fill="#FF7F6A"/>
+                        <circle cx="50" cy="75" r="8" fill="white"/>
+                        <circle cx="50" cy="75" r="4" fill="#FF7F6A"/>
+                    </svg>
+                    <div class="pillar-title">VNC Control<br>Humano</div>
+                </div>
+                <div class="pillar-item">
+                    <svg class="pillar-icon" viewBox="0 0 100 100" fill="none">
+                        <rect x="20" y="25" width="60" height="50" rx="4" fill="none" stroke="#5B5FED" stroke-width="3"/>
+                        <line x1="20" y1="40" x2="80" y2="40" stroke="#5B5FED" stroke-width="3"/>
+                        <rect x="30" y="50" width="15" height="15" fill="#FF7F6A" rx="2"/>
+                        <rect x="55" y="50" width="15" height="15" fill="#5B5FED" rx="2"/>
+                    </svg>
+                    <div class="pillar-title">Herramientas<br>Internas</div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 60px; font-size: 24px; color: var(--text-light);"><em>Veamos cada uno...</em></p>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Esta slide es crítica - muestra la estructura completa del sistema. Los iconos ayudan a que no se vean todos iguales.</p>
+                <p>Énfasis: Realismo Comportamental es el diferenciador clave (⭐⭐), Investigación de Algoritmos es el valor único.</p>
+            </div>
+        </section>
+
+        <!-- Slide 5: Pilar 1 - Realismo Comportamental -->
+        <section class="slide" data-slide="5">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Pilar 1: Realismo Comportamental</h1>
+            <img src="../visuals/renders/02_behavioral_coherence.png" alt="Behavioral Coherence" class="diagram">
+            <div class="content" style="margin-top: 20px;">
+                <p><strong>El diferenciador clave</strong></p>
+                <p><em>Coherencia cross-platform:</em> Lun: Ve ad meal kit → Mar: Busca recetas → Mié: Ve tutorial → Jue: Considera compra</p>
+                <p><em>¿Cuáles capacidades son más críticas en M1?</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Este es el corazón del sistema. Sin realismo, nos detectan inmediatamente.</p>
+                <ul>
+                    <li>Coherencia cross-platform: las acciones tienen sentido en el contexto de la "vida digital"</li>
+                    <li>Dinámica de hogares: familias con intereses correlacionados</li>
+                    <li>Sistema de 3 capas (siguiente slide): AI Narrativas → Primitivas → Acciones Atómicas</li>
+                </ul>
+                <p>Pregunta clave: ¿Qué es más crítico validar en M1?</p>
+            </div>
+        </section>
+
+        <!-- Slide 6: Sistema de 3 Capas -->
+        <section class="slide" data-slide="6">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Sistema de 3 Capas</h1>
+            <img src="../visuals/renders/01_behavioral_system.png" alt="3-Layer Behavioral System" class="diagram">
+            <div class="content" style="margin-top: 20px;">
+                <p><strong>Capa 3:</strong> NARRATIVAS AI - GPT/Claude genera planes de actividad</p>
+                <p><strong>Capa 2:</strong> PRIMITIVAS COMPORTAMENTALES - Bloques reutilizables</p>
+                <p><strong>Capa 1:</strong> ACCIONES ATÓMICAS - Movimientos precisos con variación humana</p>
+                <p style="margin-top: 30px;"><em>¿Este enfoque tiene sentido?</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Arquitectura técnica que permite flexibilidad y testing:</p>
+                <ul>
+                    <li>Capa 3: AI decide "qué hacer hoy" basado en perfil e historia</li>
+                    <li>Capa 2: Comportamientos como browse_feed(), search(), watch_content()</li>
+                    <li>Capa 1: Movimientos de mouse, scrolls, clicks con variación humana</li>
+                </ul>
+                <p>Beneficio: Cada capa es testeable independientemente, fácil adaptar a nuevas plataformas.</p>
+            </div>
+        </section>
+
+        <!-- Slide 7: Pilar 2 - Infraestructura -->
+        <section class="slide" data-slide="7">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Pilar 2: Infraestructura</h1>
+            <div class="content">
+                <p><strong>La fundación</strong></p>
+                <p><strong>Multi-dispositivo:</strong></p>
+                <ul>
+                    <li>Desktop (Chrome, Firefox, Safari)</li>
+                    <li>Mobile (Android, iOS)</li>
+                    <li>Potencial OTT futuro</li>
+                </ul>
+                <p style="margin-top: 40px;"><strong>Anti-detección sofisticada:</strong></p>
+                <ul>
+                    <li>Fingerprinting (Canvas, WebGL, Audio)</li>
+                    <li>Proxies residenciales por hogar</li>
+                    <li>Timing variation + Rate limiting</li>
+                    <li>Behavioral diversity</li>
+                </ul>
+                <p style="margin-top: 40px;"><em>¿Qué nivel de riesgo de detección es aceptable?</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>La infraestructura que soporta el realismo comportamental.</p>
+                <p>Técnicas anti-detección son múltiples capas - no hay "silver bullet". Combinación de:</p>
+                <ul>
+                    <li>Fingerprinting único pero consistente por dispositivo</li>
+                    <li>Proxies residenciales (no datacenter) asignados por hogar</li>
+                    <li>Timing natural - humanos no son robots</li>
+                    <li>Diversidad comportamental entre personas</li>
+                </ul>
+                <p>Pregunta crítica: ¿Cuál es el % de detección aceptable? ¿5%? ¿10%?</p>
+            </div>
+        </section>
+
+        <!-- Slide 8: Pilar 3 - Investigación de Algoritmos -->
+        <section class="slide" data-slide="8">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Pilar 3: Investigación de Algoritmos</h1>
+            <div class="content">
+                <p><strong>La entrega de valor</strong></p>
+                <p>No solo CUÁLES ads vio cada persona...</p>
+                <p><strong>Sino POR QUÉ este perfil recibió este ad</strong></p>
+                <ul style="margin-top: 40px;">
+                    <li>Experimentación controlada: Cambiar un factor → Observar cambio en ads</li>
+                    <li><strong>Output para usuarios internos:</strong><br>"Persona X recibió Ad Y porque algoritmo detectó búsquedas Z + engagement con contenido W"</li>
+                    <li>Insights accionables sobre estrategias de targeting</li>
+                </ul>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Este es el valor diferenciado del sistema - no solo capturar, sino entender.</p>
+                <p>Investigación activa:</p>
+                <ul>
+                    <li>Cambiar comportamiento de una persona, observar si los ads cambian</li>
+                    <li>Comparar personas con demografías similares pero intereses diferentes</li>
+                    <li>Reverse-engineer de la lógica de targeting de cada plataforma</li>
+                </ul>
+                <p>Contexto opcional si surge: Experiencia con Meta Ads Manager ayuda a entender qué targeting options existen del lado del advertiser.</p>
+            </div>
+        </section>
+
+        <!-- Slide 9: Pilar 4 - VNC Control Humano -->
+        <section class="slide" data-slide="9">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Pilar 4: VNC Control Humano</h1>
+            <img src="../visuals/renders/04_vnc_control.png" alt="VNC Control States" class="diagram">
+            <div class="content" style="margin-top: 20px;">
+                <p><strong>Ventana a la vida digital</strong></p>
+                <p>VNC = Ver en tiempo real lo que hace cada persona<br>Como mirar por encima del hombro de un usuario</p>
+                <p style="margin-top: 30px;"><strong>Metáfora del laboratorio con paredes de vidrio</strong></p>
+                <p><em>¿Qué nivel de visibilidad necesitan ustedes/equipo?</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>VNC es clave para confianza y transparencia - no es caja negra.</p>
+                <p>Casos de uso:</p>
+                <ul>
+                    <li>Demo para stakeholders: "Miren, esta persona está scrolling TikTok ahora"</li>
+                    <li>Validación de realismo: ¿Se ve como humano real?</li>
+                    <li>Debugging: Ver exactamente qué pasó cuando algo falló</li>
+                    <li>Control manual: Pausar automation y explorar manualmente si necesario</li>
+                </ul>
+                <p>Por defecto: Autonomous 24/7. Cuando se necesita: Human peek/control.</p>
+                <p>Pregunta: ¿Quién del equipo necesitaría acceso VNC?</p>
+            </div>
+        </section>
+
+        <!-- Slide 10: Pilar 5 - Herramientas Internas -->
+        <section class="slide" data-slide="10">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Pilar 5: Herramientas Internas</h1>
+            <div class="content">
+                <p><strong>Lo que usuarios internos de Seenka ven/usan</strong></p>
+                <p style="margin-top: 30px;"><strong>Dashboards en tiempo real:</strong></p>
+                <ul>
+                    <li>Estado de personas (activa/pausada/detectada)</li>
+                    <li>Ad capture gallery con filtros</li>
+                    <li>Activity feed en vivo</li>
+                    <li>Detection alerts</li>
+                </ul>
+                <p style="margin-top: 30px;"><strong>APIs para integración:</strong></p>
+                <ul>
+                    <li>Query ad data capturada</li>
+                    <li>Filtrar por targeting signals</li>
+                    <li>Integración con Stream A</li>
+                </ul>
+                <p style="margin-top: 40px;"><em>¿Qué tipo de reportes/dashboards necesitan?</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Herramientas que el equipo de Seenka usa para explorar los datos y generar insights.</p>
+                <p>Claridad de roles:</p>
+                <ul>
+                    <li>Persona = sistema de captura e investigación</li>
+                    <li>Equipo de Seenka = analistas que usan la data para crear valor para clientes finales</li>
+                </ul>
+                <p>No es scope de Persona generar reportes finales para clientes - eso es responsabilidad del equipo interno.</p>
+                <p>Pregunta: ¿Qué formato necesitan? ¿Dashboards? ¿APIs? ¿Reportes automáticos?</p>
+            </div>
+        </section>
+
+        <!-- Slide 11: Timeline -->
+        <section class="slide" data-slide="11">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Ejecución - Timeline</h1>
+            <img src="../visuals/renders/03_timeline.png" alt="Execution Timeline" class="diagram">
+            <div class="content" style="margin-top: 20px;">
+                <p><strong>Tres Fases</strong></p>
+                <ul>
+                    <li><strong>M1:</strong> Foundation & PoC</li>
+                    <li><strong>M2:</strong> Multi-Platform & Intelligence</li>
+                    <li><strong>M3:</strong> Scale & Production</li>
+                </ul>
+                <p style="margin-top: 30px;"><em>Fechas TBD - dependen de recursos y prioridades</em></p>
+                <p><em>¿Este phasing tiene sentido?</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Approach iterativo con checkpoints claros:</p>
+                <ul>
+                    <li>M1: Validar que el approach funciona (TikTok, 5-10 personas, PoC demo)</li>
+                    <li>M2: Expandir plataformas (Instagram, YouTube, Facebook) + IA avanzada</li>
+                    <li>M3: Escalar a producción con excelencia operacional</li>
+                </ul>
+                <p>Fechas dependen de recursos disponibles y urgencia del negocio.</p>
+                <p>Checkpoint en cada fase: Go/No-go decision basado en resultados.</p>
+            </div>
+        </section>
+
+        <!-- Slide 12: Puntos de Decisión -->
+        <section class="slide" data-slide="12">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Puntos de Decisión</h1>
+            <div class="content">
+                <p><strong>Necesito su input en:</strong></p>
+                <ul>
+                    <li><strong>Criterios de validación:</strong> ¿Qué define éxito?</li>
+                    <li><strong>Tolerancia a riesgo:</strong> ¿Dónde está la línea?</li>
+                    <li><strong>Priorización de plataformas:</strong> ¿Cuáles después de TikTok?</li>
+                    <li><strong>Entregables a usuarios internos:</strong> ¿Qué formato necesitan?</li>
+                    <li><strong>Coordinación Stream A:</strong> ¿Cómo integramos con Zaca?</li>
+                </ul>
+                <p style="margin-top: 60px;"><em>¿Cómo prefieren que les traiga estas decisiones?</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Esta slide es crítica - muestra que necesitas su dirección, no estás decidiendo solo.</p>
+                <p>Puntos clave a discutir:</p>
+                <ul>
+                    <li>Criterios de éxito: ¿Qué métricas importan? ¿Tasa de detección? ¿Volumen de ads?</li>
+                    <li>Tolerancia a riesgo: ¿Cuál es la línea en violaciones de ToS?</li>
+                    <li>Priorización: ¿Qué plataformas son más valiosas para clientes de Seenka?</li>
+                    <li>Formato de entregables: ¿Dashboards? ¿APIs? ¿Reportes?</li>
+                    <li>Coordinación con Zaca: ¿Modelo híbrido? ¿Cómo presentamos internamente?</li>
+                </ul>
+                <p>Pregunta final: ¿Reuniones regulares o por demanda?</p>
+            </div>
+        </section>
+
+        <!-- Slide 13: Next Steps -->
+        <section class="slide" data-slide="13">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Next Steps</h1>
+            <div class="content">
+                <p><strong>¿Qué sigue?</strong></p>
+                <p style="margin-top: 40px;"><strong>Hoy:</strong></p>
+                <ul>
+                    <li>Validar entendimiento</li>
+                    <li>Identificar preguntas/preocupaciones</li>
+                    <li>Definir cómo coordinamos</li>
+                </ul>
+                <p style="margin-top: 40px;"><strong>Próximo:</strong></p>
+                <ul>
+                    <li>[TBD basado en conversación]</li>
+                </ul>
+                <p style="margin-top: 80px; font-size: 32px; text-align: center;"><em>¿Qué preguntas tienen ustedes?</em></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Cierre conversacional - dejar claro que esto es el inicio de la colaboración.</p>
+                <p>Posibles cierres:</p>
+                <ul>
+                    <li>¿Qué les preocupa más de este approach?</li>
+                    <li>¿Cuál sería el next step ideal desde su perspectiva?</li>
+                    <li>¿Hay algo que no cubrí que debería?</li>
+                    <li>¿Cómo quieren que coordinemos con Diego y Zaca?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Slide 14: Materiales de Apoyo -->
+        <section class="slide" data-slide="14">
+            <div class="slide-header">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M24 4L6 14v10c0 11 5 21.5 18 26 13-4.5 18-15 18-26V14L24 4zm-2 32l-8-8 2.8-2.8L22 30.4l11.2-11.2L36 22 22 36z"/>
+                    </svg>
+                    seenka
+                </div>
+                <div class="tagline">Media & Customer Data Platform</div>
+            </div>
+            <h1>Materiales de Apoyo</h1>
+            <div class="content">
+                <p><strong>Documentación disponible:</strong></p>
+                <ul>
+                    <li>Milestone Planning (6 páginas detalladas)</li>
+                    <li>Arquitectura técnica completa (CLAUDE.md)</li>
+                    <li>Este deck y README con talking points</li>
+                </ul>
+                <p style="margin-top: 60px;">Todo en repo: <strong>digital/persona/</strong></p>
+            </div>
+            <div class="speaker-notes">
+                <h3>Notas del Presentador</h3>
+                <p>Referencias a documentación completa disponible:</p>
+                <ul>
+                    <li>planning/MILESTONES.tsv - resumen de milestones</li>
+                    <li>planning/01-05_*.tsv - detalles por capacidad (5 páginas)</li>
+                    <li>CLAUDE.md - especificación técnica completa</li>
+                    <li>presentation/ - este deck y talking points</li>
+                </ul>
+                <p>Tener milestone sheets a mano para reference si preguntan detalles específicos.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-button" id="prev-btn">←</button>
+        <span class="slide-counter"><span id="current-slide">1</span> / <span id="total-slides">14</span></span>
+        <button class="nav-button" id="next-btn">→</button>
+    </div>
+
+    <!-- Help Overlay -->
+    <div class="help-overlay" id="help-overlay">
+        <strong>Keyboard Shortcuts:</strong><br>
+        <kbd>←</kbd> <kbd>→</kbd> Navigate slides<br>
+        <kbd>S</kbd> Toggle speaker notes<br>
+        <kbd>?</kbd> Show this help<br>
+        <kbd>Home</kbd> First slide<br>
+        <kbd>End</kbd> Last slide
+    </div>
+
+    <script>
+        // Presentation state
+        let currentSlide = 1;
+        const totalSlides = 14;
+        let notesVisible = false;
+
+        // Elements
+        const slides = document.querySelectorAll('.slide');
+        const currentSlideEl = document.getElementById('current-slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const helpOverlay = document.getElementById('help-overlay');
+
+        // Navigation functions
+        function showSlide(n) {
+            if (n < 1) n = 1;
+            if (n > totalSlides) n = totalSlides;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[n - 1].classList.add('active');
+
+            currentSlide = n;
+            currentSlideEl.textContent = n;
+
+            // Update button states
+            prevBtn.style.opacity = n === 1 ? '0.3' : '1';
+            nextBtn.style.opacity = n === totalSlides ? '0.3' : '1';
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) showSlide(currentSlide - 1);
+        }
+
+        function toggleNotes() {
+            notesVisible = !notesVisible;
+            document.querySelectorAll('.speaker-notes').forEach(notes => {
+                notes.classList.toggle('visible', notesVisible);
+            });
+        }
+
+        function toggleHelp() {
+            helpOverlay.classList.toggle('visible');
+            setTimeout(() => {
+                if (helpOverlay.classList.contains('visible')) {
+                    helpOverlay.classList.remove('visible');
+                }
+            }, 5000);
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        document.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'ArrowLeft':
+                case 'PageUp':
+                    prevSlide();
+                    break;
+                case 'ArrowRight':
+                case 'PageDown':
+                case ' ':
+                    e.preventDefault();
+                    nextSlide();
+                    break;
+                case 's':
+                case 'S':
+                    toggleNotes();
+                    break;
+                case '?':
+                    toggleHelp();
+                    break;
+                case 'Home':
+                    showSlide(1);
+                    break;
+                case 'End':
+                    showSlide(totalSlides);
+                    break;
+            }
+        });
+
+        // Click anywhere on slide to advance
+        document.querySelector('.presentation-container').addEventListener('click', (e) => {
+            if (!e.target.closest('.navigation') && !e.target.closest('.speaker-notes')) {
+                nextSlide();
+            }
+        });
+
+        // Initialize
+        showSlide(1);
+
+        // Show help briefly on load
+        setTimeout(() => {
+            helpOverlay.classList.add('visible');
+            setTimeout(() => helpOverlay.classList.remove('visible'), 4000);
+        }, 1000);
+    </script>
+</body>
+</html>

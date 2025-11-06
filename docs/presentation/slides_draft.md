@@ -30,71 +30,45 @@ Esto es una conversación - preguntas en cualquier momento
 
 ---
 
-## Slide 3: Contexto - Intelligence Cycle
-
-**[Visual: Diagrama 01_intelligence_cycle.mmd]**
-
-```
-El ciclo de inteligencia:
-
-Persona comporta → Plataforma targetea → Capturamos →
-Analizamos patrones → Herramientas internas para equipo
-
-¿Qué es más valioso: datos crudos o insights de targeting?
-```
-
----
-
-## Slide 4: El Desafío Técnico
+## Slide 3: El Desafío y el Valor
 
 ```
 No es solo automatización...
 
 Es simulación de comportamiento humano realista:
-
 • Coherencia cross-platform
 • Digital footprint auténtico
 • Anti-detección sofisticada
-• Investigación de algoritmos de targeting
+
+El valor único: Investigación de algoritmos
+• No solo QUÉ ads se muestran
+• Sino POR QUÉ este perfil los recibe
+• Reverse-engineering de targeting
 
 ¿Estoy entendiendo correctamente la visión?
 ```
 
 ---
 
-## Slide 5: Valor Único - Targeting Research
-
-```
-Más allá de captura de anuncios:
-
-Investigación activa de algoritmos de targeting
-
-No solo QUÉ ads → sino POR QUÉ este perfil los recibe
-
-Reverse-engineering de estrategias de advertisers
-
-¿Qué tan profundo queremos ir en esta investigación?
-```
-
----
-
-## Slide 6: Capacidades - Intro
+## Slide 4: Capacidades - Intro
 
 ```
 5 Pilares Técnicos Necesarios:
 
 1. Realismo Comportamental ⭐⭐
 2. Infraestructura y Anti-Detección
-3. Inteligencia de Targeting 🆕
+3. Investigación de Algoritmos 🔬
 4. Visibilidad y Control Humano 🔍
 5. Operaciones y Herramientas Internas
+
+[AGREGAR ICONO GRANDE para cada pilar]
 
 Veamos cada uno...
 ```
 
 ---
 
-## Slide 7: Pilar 1 - Realismo Comportamental
+## Slide 5: Pilar 1 - Realismo Comportamental
 
 **[Visual: Diagrama 02_behavioral_coherence.mmd]**
 
@@ -116,7 +90,28 @@ AI Narrativas → Primitivas → Acciones Atómicas
 
 ---
 
-## Slide 8: Pilar 2 - Infraestructura
+## Slide 6: Sistema de 3 Capas
+
+**[Visual: Diagrama 01_behavioral_system.png]**
+
+```
+Cómo funciona el realismo comportamental
+
+CAPA 3: NARRATIVAS AI
+GPT/Claude genera planes de actividad
+
+CAPA 2: PRIMITIVAS COMPORTAMENTALES
+Bloques reutilizables: browse_feed, search, watch_content
+
+CAPA 1: ACCIONES ATOMICAS
+Movimientos precisos con variación humana
+
+¿Este enfoque tiene sentido?
+```
+
+---
+
+## Slide 7: Pilar 2 - Infraestructura
 
 ```
 La fundación
@@ -137,7 +132,7 @@ Anti-detección sofisticada:
 
 ---
 
-## Slide 9: Pilar 3 - Inteligencia de Targeting
+## Slide 8: Pilar 3 - Investigación de Algoritmos
 
 ```
 La entrega de valor
@@ -152,12 +147,12 @@ Output para usuarios internos:
 "Persona X recibió Ad Y porque algoritmo detectó
 búsquedas Z + engagement con contenido W"
 
-Insights accionables sobre estrategias
+Insights accionables sobre estrategias de targeting
 ```
 
 ---
 
-## Slide 10: Pilar 4 - VNC Control Humano
+## Slide 9: Pilar 4 - VNC Control Humano
 
 **[Visual: Diagrama 04_vnc_control.mmd]**
 
@@ -183,7 +178,7 @@ Casos de uso:
 
 ---
 
-## Slide 11: Pilar 5 - Herramientas Internas
+## Slide 10: Pilar 5 - Herramientas Internas
 
 ```
 Lo que usuarios internos de Seenka ven/usan
@@ -210,7 +205,7 @@ Controles operacionales:
 
 ---
 
-## Slide 12: Ejecución - Timeline
+## Slide 11: Ejecución - Timeline
 
 **[Visual: Diagrama 03_timeline.mmd]**
 
@@ -228,7 +223,7 @@ Fechas TBD - dependen de recursos y prioridades
 
 ---
 
-## Slide 13: Puntos de Decisión
+## Slide 12: Puntos de Decisión
 
 ```
 Necesito su input en:
@@ -244,7 +239,7 @@ Necesito su input en:
 
 ---
 
-## Slide 14: Next Steps
+## Slide 13: Next Steps
 
 ```
 ¿Qué sigue?
@@ -262,7 +257,7 @@ Próximo:
 
 ---
 
-## Slide 15: Materiales de Apoyo
+## Slide 14: Materiales de Apoyo
 
 ```
 Documentación disponible:
@@ -279,10 +274,10 @@ Todo en repo: digital/persona/
 ## Notas de Formato para Google Slides:
 
 **Estructura:**
-- 15 slides totales (4 más que versión inicial)
-- Sección 1: Contexto (slides 3-5)
-- Sección 2: Capacidades (slides 6-11) - La más extensa
-- Sección 3: Ejecución (slides 12-15)
+- 14 slides totales
+- Sección 1: Contexto (slide 3) - Desafío y valor único
+- Sección 2: Capacidades (slides 4-10) - La más extensa, 5 pilares + sistema 3 capas
+- Sección 3: Ejecución (slides 11-14)
 
 **Diseño sugerido:**
 - Fondo blanco/gris claro (corporativo Seenka)
@@ -302,7 +297,14 @@ Todo en repo: digital/persona/
 - O sin transiciones - es conversación, no show
 
 **Diagramas necesarios:**
-- 01_intelligence_cycle.mmd (Slide 3)
-- 02_behavioral_coherence.mmd (Slide 7)
-- 03_timeline.mmd (Slide 12)
-- 04_vnc_control.mmd (Slide 10) - NUEVO
+- 01_behavioral_system.png (Slide 6) - Sistema de 3 capas
+- 02_behavioral_coherence.mmd (Slide 5) - Coherencia comportamental
+- 03_timeline.mmd (Slide 11) - Timeline (o crear en slides directamente)
+- 04_vnc_control.mmd (Slide 9) - Control humano VNC
+
+**Iconos grandes necesarios (Slide 4):**
+1. Realismo Comportamental - icono cerebro/persona
+2. Infraestructura - icono servidor/red
+3. Investigación de Algoritmos - icono lupa/microscopio
+4. Control Humano - icono ojo/monitor
+5. Operaciones - icono dashboard/gráfico

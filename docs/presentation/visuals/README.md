@@ -11,13 +11,21 @@ Esta carpeta contiene los diagramas Mermaid para la presentación de stakeholder
 
 ## Cómo Renderizar los Diagramas
 
-### Opción 1: Mermaid CLI (Recomendado)
+### Opción 1: Script Automatizado (Recomendado)
 
 ```bash
-# Instalar Mermaid CLI
+# Renderizar todos los diagramas de una vez
+cd visuals/
+./render_all.sh
+```
+
+### Opción 2: Mermaid CLI Manual
+
+```bash
+# Instalar Mermaid CLI (si no lo tienes)
 npm install -g @mermaid-js/mermaid-cli
 
-# Renderizar todos los diagramas
+# Renderizar todos los diagramas manualmente
 cd visuals/
 mmdc -i 01_intelligence_cycle.mmd -o renders/01_intelligence_cycle.png -w 1920 -H 1080 -b transparent
 mmdc -i 02_behavioral_coherence.mmd -o renders/02_behavioral_coherence.png -w 1920 -H 1080 -b transparent
@@ -25,14 +33,14 @@ mmdc -i 03_timeline.mmd -o renders/03_timeline.png -w 1920 -H 1080 -b transparen
 mmdc -i 04_vnc_control.mmd -o renders/04_vnc_control.png -w 1920 -H 1080 -b transparent
 ```
 
-### Opción 2: Web Editor
+### Opción 3: Web Editor
 
 1. Ir a https://mermaid.live/
 2. Copiar contenido de cada archivo `.mmd`
 3. Pegar en el editor
 4. Descargar como PNG/SVG desde el menú
 
-### Opción 3: VSCode Extension
+### Opción 4: VSCode Extension
 
 1. Instalar extensión "Markdown Preview Mermaid Support"
 2. Abrir archivo `.mmd`

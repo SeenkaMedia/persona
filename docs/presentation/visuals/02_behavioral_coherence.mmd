@@ -1,4 +1,4 @@
-%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'28px', 'fontFamily':'Lato, sans-serif'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'28px', 'fontFamily':'Lato, sans-serif', 'lineColor':'#666666', 'edgeLabelBackground':'#ffffff'}}}%%
 
 graph TD
     A["<b>LUNES</b><br/>TikTok: Ve ad meal kit"]
@@ -9,9 +9,15 @@ graph TD
 
     A -.->|"Influye"| B
     A -.->|"Influye"| C
-    B -->|"Lleva a"| D
-    C -->|"Lleva a"| D
+    B ==>|"Lleva a"| D
+    C ==>|"Lleva a"| D
     D -.->|"Evoluciona"| E
+
+    linkStyle 0 stroke:#666666,stroke-width:3px
+    linkStyle 1 stroke:#666666,stroke-width:3px
+    linkStyle 2 stroke:#666666,stroke-width:4px
+    linkStyle 3 stroke:#666666,stroke-width:4px
+    linkStyle 4 stroke:#666666,stroke-width:3px
 
     style A fill:#FF7F6A,stroke:#FF6B52,stroke-width:4px,color:#fff,rx:15,ry:15
     style B fill:#E8EAED,stroke:#5B5FED,stroke-width:3px,color:#333,rx:15,ry:15

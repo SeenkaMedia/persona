@@ -1,4 +1,4 @@
-%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'30px', 'fontFamily':'Lato, sans-serif'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'30px', 'fontFamily':'Lato, sans-serif', 'lineColor':'#666666', 'edgeLabelBackground':'#ffffff', 'clusterBkg':'#E8EAED', 'defaultLinkColor':'#666666'}, 'flowchart': {'curve': 'basis'}, 'stateDiagram': {'lineWidth': 5}}}%%
 
 stateDiagram-v2
     [*] --> Autonomous: Crear persona
@@ -36,3 +36,7 @@ stateDiagram-v2
         Para demos
         y debugging
     end note
+
+    style Autonomous fill:#F5E6D3,stroke:#666666,stroke-width:3px
+    style Observing fill:#F5E6D3,stroke:#666666,stroke-width:3px
+    style Controlling fill:#F5E6D3,stroke:#666666,stroke-width:3px

@@ -1,4 +1,4 @@
-%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'28px', 'fontFamily':'Lato, sans-serif'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'28px', 'fontFamily':'Lato, sans-serif', 'lineColor':'#666666', 'edgeLabelBackground':'#ffffff'}}}%%
 
 graph LR
     A["<b>CAPA 3: NARRATIVAS AI</b><br/><br/>GPT/Claude genera planes<br/><br/>Ejemplo:<br/>Rutina manana: revisar notificaciones<br/>navegar feed 15min, ver 2-3 videos"]
@@ -7,8 +7,11 @@ graph LR
 
     C["<b>CAPA 1: ACCIONES ATOMICAS</b><br/><br/>Movimientos precisos<br/><br/>scroll speed duration<br/>click selector delay<br/>type text typing_speed error_rate"]
 
-    A -->|"AI traduce"| B
-    B -->|"Codigo ejecuta"| C
+    A ==>|"AI traduce"| B
+    B ==>|"Codigo ejecuta"| C
+
+    linkStyle 0 stroke:#666666,stroke-width:4px
+    linkStyle 1 stroke:#666666,stroke-width:4px
 
     style A fill:#5B5FED,stroke:#4A4DDB,stroke-width:5px,color:#fff,rx:15,ry:15
     style B fill:#FF7F6A,stroke:#FF6B52,stroke-width:5px,color:#fff,rx:15,ry:15

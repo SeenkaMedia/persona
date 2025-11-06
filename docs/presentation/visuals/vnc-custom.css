@@ -1,0 +1,14 @@
+.statediagram .transition {
+    stroke: #666666 !important;
+    stroke-width: 4px !important;
+}
+
+.statediagram .relation {
+    stroke: #666666 !important;
+    stroke-width: 4px !important;
+}
+
+.statediagram-state .divider {
+    stroke: #666666 !important;
+    stroke-width: 2px !important;
+}

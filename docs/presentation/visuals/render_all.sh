@@ -34,7 +34,10 @@ for diagram in "${diagrams[@]}"; do
 
     # Gantt chart needs larger size for readable font
     if [ "$diagram" = "03_timeline" ]; then
-        mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 5000 -H 1500 -b transparent
+        mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 2400 -H 1080 -b transparent
+    # VNC control needs custom CSS for thicker lines
+    elif [ "$diagram" = "04_vnc_control" ]; then
+        mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 1920 -H 1080 -b transparent -C vnc-custom.css
     else
         mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 1920 -H 1080 -b transparent
     fi

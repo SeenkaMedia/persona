@@ -1,0 +1,62 @@
+/* Custom styling for gantt chart - works in light and dark mode */
+
+/* All text should be dark for visibility */
+text {
+    fill: #1a1a2e !important;
+}
+
+/* Section labels */
+.sectionTitle {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    fill: #1a1a2e !important;
+}
+
+/* Regular task text */
+.taskText {
+    font-size: 16px !important;
+    fill: #1a1a2e !important;
+}
+
+/* Make ALL milestone-related text larger and bolder */
+text:has(+ .taskText):contains("CHECKPOINT"),
+text[class*="CHECKPOINT"],
+.taskText:contains("CHECKPOINT") {
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    fill: #1a1a2e !important;
+}
+
+/* Grid lines - visible in both modes */
+.grid {
+    stroke: #888888 !important;
+    stroke-width: 2px !important;
+}
+
+line {
+    stroke: #888888 !important;
+    stroke-width: 2px !important;
+}
+
+/* Section backgrounds - white */
+rect {
+    fill: #ffffff !important;
+}
+
+/* Task bars */
+.task {
+    fill: #5B5FED !important;
+    stroke: #4A4DDB !important;
+}
+
+.taskActive {
+    fill: #8B8FED !important;
+    stroke: #5B5FED !important;
+}
+
+/* Milestone diamonds - larger and orange */
+.milestone {
+    fill: #FF7F6A !important;
+    stroke: #CC6555 !important;
+    stroke-width: 3px !important;
+}

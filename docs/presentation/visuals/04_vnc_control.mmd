@@ -1,6 +1,7 @@
-%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'30px', 'fontFamily':'Lato, sans-serif', 'lineColor':'#666666', 'edgeLabelBackground':'#ffffff', 'clusterBkg':'#E8EAED', 'defaultLinkColor':'#666666'}, 'flowchart': {'curve': 'basis'}, 'stateDiagram': {'lineWidth': 5}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'26px', 'fontFamily':'Lato, sans-serif', 'lineColor':'#666666', 'edgeLabelBackground':'#ffffff', 'clusterBkg':'#E8EAED', 'defaultLinkColor':'#666666'}, 'flowchart': {'curve': 'basis', 'nodeSpacing': 150, 'rankSpacing': 100}, 'stateDiagram': {'lineWidth': 5}}}%%
 
 stateDiagram-v2
+    direction LR
     [*] --> Autonomous: Crear persona
 
     Autonomous: MODO AUTONOMO
@@ -27,10 +28,6 @@ stateDiagram-v2
         Mayoria del tiempo
     end note
 
-    note right of Observing
-        Laboratorio con
-        paredes de vidrio
-    end note
 
     note right of Controlling
         Para demos

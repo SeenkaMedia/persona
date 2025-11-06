@@ -32,12 +32,12 @@ echo ""
 for diagram in "${diagrams[@]}"; do
     echo "Rendering ${diagram}.mmd..."
 
-    # Gantt chart needs larger size for readable font
+    # Gantt chart needs larger size, white background, and custom CSS
     if [ "$diagram" = "03_timeline" ]; then
-        mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 2400 -H 1080 -b transparent
-    # VNC control needs custom CSS for thicker lines
+        mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 2400 -H 1080 -b white -C gantt-custom.css
+    # VNC control needs custom CSS for thicker lines and wider horizontal layout
     elif [ "$diagram" = "04_vnc_control" ]; then
-        mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 1920 -H 1080 -b transparent -C vnc-custom.css
+        mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 2400 -H 800 -b transparent -C vnc-custom.css
     else
         mmdc -i "${diagram}.mmd" -o "renders/${diagram}.png" -w 1920 -H 1080 -b transparent
     fi

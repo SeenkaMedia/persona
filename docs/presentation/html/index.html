@@ -164,6 +164,20 @@
             font-style: italic;
         }
 
+        /* Links styling - use coral/orange instead of blue */
+        .content a {
+            color: #FF7F6A;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid #FF7F6A;
+            transition: all 0.2s;
+        }
+
+        .content a:hover {
+            color: #FF9580;
+            border-bottom-color: #FF9580;
+        }
+
         /* Icon grid for capabilities */
         .pillar-grid {
             display: grid;
@@ -623,9 +637,8 @@
             <img src="../visuals/renders/04_vnc_control.png" alt="VNC Control States" class="diagram">
             <div class="content" style="margin-top: 20px;">
                 <p><strong>Ventana a la vida digital</strong></p>
-                <p>VNC = Ver en tiempo real lo que hace cada persona<br>Como mirar por encima del hombro de un usuario</p>
-                <p style="margin-top: 30px;"><strong>Metáfora del laboratorio con paredes de vidrio</strong></p>
-                <p><em>¿Qué nivel de visibilidad necesitan ustedes/equipo?</em></p>
+                <p>VNC = Ver en tiempo real lo que hace cada persona</p>
+                <p style="margin-top: 40px;"><em>¿Qué nivel de visibilidad necesitan ustedes/equipo?</em></p>
             </div>
             <div class="speaker-notes">
                 <h3>Notas del Presentador</h3>
@@ -812,11 +825,11 @@
             <div class="content">
                 <p><strong>Documentación disponible:</strong></p>
                 <ul>
-                    <li>Milestone Planning (6 páginas detalladas)</li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1MwJt0v1l4MBhpuXAKMgyuE7L6I67SVJZGDY169iUxUo/edit?usp=sharing" target="_blank">Milestone Planning</a> (6 páginas detalladas)</li>
                     <li>Arquitectura técnica completa (CLAUDE.md)</li>
                     <li>Este deck y README con talking points</li>
                 </ul>
-                <p style="margin-top: 60px;">Todo en repo: <strong>digital/persona/</strong></p>
+                <p style="margin-top: 60px;">Todo en repo: <a href="https://github.com/SeenkaMedia/persona.git" target="_blank">github.com/SeenkaMedia/persona</a></p>
             </div>
             <div class="speaker-notes">
                 <h3>Notas del Presentador</h3>
@@ -935,12 +948,7 @@
             }
         });
 
-        // Click anywhere on slide to advance
-        document.querySelector('.presentation-container').addEventListener('click', (e) => {
-            if (!e.target.closest('.navigation') && !e.target.closest('.speaker-notes')) {
-                nextSlide();
-            }
-        });
+        // Removed click-to-advance functionality - only navigation buttons work
 
         // Initialize
         showSlide(1);

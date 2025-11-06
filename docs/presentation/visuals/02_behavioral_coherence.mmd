@@ -1,0 +1,35 @@
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#5B5FED','primaryTextColor':'#fff','primaryBorderColor':'#4A4DDB','lineColor':'#5B5FED','secondaryColor':'#F8F9FA','tertiaryColor':'#E8EAED','fontSize':'14px'}}}%%
+
+graph TD
+    subgraph Lunes
+        A[TikTok:<br/>Ve ad de<br/>meal kit]
+    end
+
+    subgraph Martes
+        B[Google:<br/>Busca<br/>meal prep ideas]
+        C[Instagram:<br/>Sigue cuentas<br/>de comida]
+    end
+
+    subgraph Miércoles
+        D[YouTube:<br/>Ve tutorial<br/>meal prep]
+        E[TikTok:<br/>Interactúa con<br/>contenido cocina]
+    end
+
+    subgraph Jueves
+        F[Facebook:<br/>Considera compra<br/>meal kit]
+    end
+
+    A -->|influencia| B
+    A -->|influencia| C
+    B -->|refuerza| D
+    C -->|refuerza| D
+    D -->|lleva a| E
+    B -->|evoluciona| F
+    D -->|evoluciona| F
+
+    style A fill:#5B5FED,stroke:#4A4DDB,stroke-width:2px,color:#fff
+    style B fill:#E8EAED,stroke:#5B5FED,stroke-width:2px,color:#333
+    style C fill:#E8EAED,stroke:#5B5FED,stroke-width:2px,color:#333
+    style D fill:#5B5FED,stroke:#4A4DDB,stroke-width:2px,color:#fff
+    style E fill:#E8EAED,stroke:#5B5FED,stroke-width:2px,color:#333
+    style F fill:#5B5FED,stroke:#4A4DDB,stroke-width:2px,color:#fff

@@ -1,0 +1,43 @@
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#5B5FED','primaryTextColor':'#fff','primaryBorderColor':'#4A4DDB','lineColor':'#5B5FED','secondaryColor':'#F8F9FA','tertiaryColor':'#E8EAED','fontSize':'14px'}}}%%
+
+stateDiagram-v2
+    [*] --> Autonomous: Persona creada
+
+    Autonomous: 🤖 Modo Autónomo
+    Autonomous: • AI ejecuta narrativas
+    Autonomous: • 24/7 operación
+    Autonomous: • Sin intervención
+
+    Autonomous --> Observing: Abrir VNC
+
+    Observing: 👁️ Observación Humana
+    Observing: • Ver en tiempo real
+    Observing: • Validar comportamiento
+    Observing: • No interrumpe automation
+
+    Observing --> Autonomous: Cerrar VNC
+    Observing --> Controlling: Tomar control
+
+    Controlling: 🎮 Control Humano
+    Controlling: • Pausar automation
+    Controlling: • Exploración manual
+    Controlling: • Debugging/investigación
+
+    Controlling --> Autonomous: Devolver control
+
+    note right of Autonomous
+        Default state
+        Mayoría del tiempo aquí
+    end note
+
+    note right of Observing
+        Laboratorio con
+        paredes de vidrio
+    end note
+
+    note right of Controlling
+        Cuando necesario:
+        • Demo
+        • QA
+        • Debugging
+    end note

@@ -1,0 +1,81 @@
+Milestone	Target Date	Capture Infrastructure	Behavioral Intelligence	Operations & Monitor	Platforms	Testing, Integration, Resources and Risk
+M1.1: Infrastructure & Data Setup	___	"Setup GKE
+PostgreSQL
+Proxies
+Basic fingerprinting"	"Define data models
+Schedule templates"	"Setup Firestore
+GCS
+Basic monitoring"	"Setup TikTok automation environment"	"Define formats
+Access controls
+Audit trail
+Team roles"
+M1.2: Core Automation & Behavior	___	"Deploy containers
+Proxy logic
+Anti-detection basics"	"Build primitives
+Atomic actions
+Narrative execution"	"Implement logging
+Screenshot pipeline"	"Implement TikTok browsing
+Ad detection"	"Manual review procedures
+Integration testing"
+M1.3: Integration & Validation	___	"Test stability
+Validate proxies
+Measure costs"	"Validate primitives
+Assess human intervention"	"Validate data integrity
+Calculate costs"	"Measure ad capture rate
+Accuracy validation"	"Complete validation
+Cost estimates
+Incident docs"
+M1: Foundation & Proof of Concept	___	"Working infrastructure with basic anti-detection"	"Foundational behavioral system with core primitives"	"Basic monitoring and data pipeline deployed"	"TikTok automation and ad capture working"	"Technical feasibility and integration validated"
+M2.1: Platform Expansion	___	"Add mobile emulation
+Scale GKE for multi-platform"	"Adapt primitives for Instagram
+YouTube
+Facebook"	"Extend monitoring for multi-platform activity"	"Launch Instagram
+YouTube
+Facebook automation"	"Validate accuracy across platforms"
+M2.2: AI & Advanced Behavior	___	"Rich profiles
+Households
+Auto-scaling
+Advanced anti-detection"	"LLM narratives
+Cross-platform coherence
+Interest graphs"	"Event sourcing
+BigQuery
+Elasticsearch
+Cost optimization"	"Expand engagement actions across platforms"	"Establish targets
+Deduplication
+Automated responses"
+M2.3: Monitoring & APIs	___	"Container health dashboards
+Detection alerts"	"AI validation dashboard
+Behavioral metrics"	"Build dashboards
+APIs
+Internal reports"	"Platform-specific monitoring
+Metrics tracking"	"API layer
+Schema standards
+Resource planning"
+M2: Multi-Platform & Intelligence	___	"Mobile+desktop with households and advanced anti-detection"	"AI narratives with comprehensive primitives and automation"	"Dashboards, APIs, analytics, and first reports operational"	"Multi-platform automation with coherent behavior"	"AI quality validated and Stream A integration started"
+M3.1: Scale Infrastructure	___	"Scale to production
+Account rotation
+Device farms
+Households"	"Self-improving narratives
+High reliability
+Cost optimization"	"Full observability
+SLA tracking
+Production pipeline"	"All platforms production-ready"	"Automated validation
+Benchmarking
+QA procedures"
+M3.2: Client Deliverables	___	"Lifecycle management
+Account dashboards"	"Behavioral patterns documentation"	"Client dashboards
+APIs
+Automated reports
+Alerts"	"Client-facing features on all platforms"	"Validate deliverables
+Gather feedback"
+M3.3: Operational Excellence	___	"Automated rotation
+Disaster recovery
+Runbooks"	"Minimal intervention
+Troubleshooting docs"	"Runbooks
+Incident response
+Compliance
+Kill switches"	"Platform-specific operational procedures"	"Unified warehouse
+System integration
+Training"
+M3: Scale & Production Operations	___	"Production scale with automated management"	"Self-improving AI with minimal intervention"	"Full observability with client APIs and operational excellence"	"All platforms production-ready and expandable"	"Production validation with full integration and compliance"
+Project: Persona - Automated Panel Intelligence System	COMPLETE	"Scalable infrastructure with automated anti-detection"	"AI-driven realistic behavior with minimal human intervention"	"Comprehensive monitoring with client deliverables and integrations"	"Reliable multi-platform automation"	"Validated intelligence capabilities with compliance established"

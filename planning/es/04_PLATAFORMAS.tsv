@@ -1,0 +1,122 @@
+Hito	Fecha Objetivo	TikTok	Instagram	YouTube	Facebook	Expansión
+M1.1: Configuración de Infraestructura y Datos	___	"Configurar entorno de automatización de TikTok.
+Configurar navegación de página For You.
+Planificar enfoque de scroll e interacción.
+Documentar requisitos de TikTok."	N/A	N/A	N/A	"Documentar requisitos futuros de plataforma.
+Planificar enfoque de expansión multi-plataforma.
+Investigar prioridades de plataforma.
+Definir criterios de expansión."
+M1.2: Automatización y Comportamiento Central	___	"Implementar automatización de navegación de feed de TikTok.
+Construir lógica de detección de anuncios para diferenciar anuncios de contenido orgánico.
+Crear captura de capturas de pantalla para anuncios detectados.
+Probar navegación básica y scrolling."	N/A	N/A	N/A	"Continuar investigación de plataforma.
+Planificar requisitos de Instagram.
+Definir cronograma de expansión de plataforma.
+Documentar riesgos de expansión."
+M1.3: Integración y Validación	___	"Medir tasa de captura de anuncios de TikTok.
+Validar precisión de detección de anuncios (falsos positivos/negativos).
+Documentar comportamiento y limitaciones de plataforma.
+Probar durante ___ días para validar estabilidad."	N/A	N/A	N/A	"Finalizar plan de expansión de Instagram.
+Validar cronograma de expansión.
+Evaluar requisitos de recursos.
+Documentar enfoque de expansión."
+M1: Fundamentos y Prueba de Concepto	___	"Automatización de TikTok operacional con navegación de feed y detección/captura de anuncios funcionando."	"Requisitos de plataforma documentados para expansión futura."	"Requisitos de plataforma documentados para expansión futura."	"Requisitos de plataforma documentados para expansión futura."	"Estrategia de expansión multi-plataforma definida con Instagram, YouTube, Facebook priorizados."
+M2.1: Expansión de Plataformas	___	"Mantener estabilidad de TikTok.
+Probar problemas de regresión.
+Prepararse para características de engagement.
+Documentar lecciones aprendidas de TikTok."	"Lanzar automatización de Instagram: navegación de feed, visualización de Stories, visualización de Reels.
+Implementar detección de anuncios de Instagram (anuncios de feed, anuncios de Story, anuncios de Explore).
+Crear captura de capturas de pantalla para anuncios de Instagram.
+Probar navegación y scrolling de Instagram."	"Lanzar automatización de YouTube: visualización de video con tasas de finalización realistas.
+Implementar detección de anuncios de YouTube (pre-roll, mid-roll, anuncios display).
+Crear captura de anuncios para anuncios de YouTube.
+Probar navegación y controles de reproductor de video de YouTube."	"Lanzar automatización básica de Facebook: navegación de feed.
+Implementar detección de anuncios de Facebook (anuncios de feed, anuncios de barra lateral).
+Crear captura de capturas de pantalla para anuncios de Facebook.
+Probar navegación de Facebook."	"Evaluar próximas prioridades de plataforma.
+Investigar requisitos de Twitter/X, Snapchat, Pinterest.
+Planificar cronograma de expansión.
+Documentar criterios de evaluación de plataforma."
+M2.2: IA y Comportamiento Avanzado	___	"Expandir TikTok a conjunto completo de características.
+Agregar acciones de engagement (likes, follows, comments).
+Implementar soporte de múltiples tipos de contenido (For You, Following, Search).
+Probar confiabilidad de engagement y riesgo de detección."	"Agregar primitivas de engagement de Instagram (likes, follows).
+Implementar patrones de interacción de Stories.
+Probar engagement de Reels.
+Validar realismo Comportamental de Instagram."	"Agregar primitivas de engagement de YouTube (likes, subscribes).
+Implementar seguimiento de búsqueda y recomendación.
+Probar patrones de visualización de video.
+Validar realismo Comportamental de YouTube."	"Agregar engagement básico de Facebook.
+Probar patrones de interacción de feed.
+Validar realismo Comportamental de Facebook.
+Documentar limitaciones de Facebook."	"Continuar investigación de expansión de plataforma.
+Actualizar prioridades de plataforma basándose en aprendizajes.
+Planificar integración de plataforma adicional.
+Documentar desafíos específicos de plataforma."
+M2.3: Monitoreo y APIs	___	"Implementar monitoreo y métricas específicas de TikTok.
+Crear dashboards de captura de anuncios de TikTok.
+Rastrear eventos de detección de TikTok.
+Construir reportes de rendimiento de TikTok."	"Implementar monitoreo y métricas específicas de Instagram.
+Crear dashboards de captura de anuncios de Instagram.
+Rastrear eventos de detección de Instagram.
+Construir reportes de rendimiento de Instagram."	"Implementar monitoreo y métricas específicas de YouTube.
+Crear dashboards de captura de anuncios de YouTube.
+Rastrear eventos de detección de YouTube.
+Construir reportes de rendimiento de YouTube."	"Implementar monitoreo y métricas específicas de Facebook.
+Crear dashboards de captura de anuncios de Facebook.
+Rastrear eventos de detección de Facebook.
+Construir reportes de rendimiento de Facebook."	"Construir dashboards de comparación entre plataformas.
+Implementar métricas de efectividad de plataforma.
+Crear framework de priorización de plataforma.
+Documentar recomendaciones de expansión."
+M2: Multi-Plataforma e Inteligencia	___	"TikTok con características completas de engagement (likes, follows, comments) y múltiples tipos de contenido."	"Automatización de Instagram con feed, Stories, Reels y primitivas de engagement operacionales."	"Automatización de YouTube con visualización de video, engagement y seguimiento de búsqueda/recomendación funcionando."	"Automatización de Facebook con navegación de feed y engagement básico operacional."	"Framework de comparación entre plataformas con métricas de efectividad y priorización de expansión."
+M3.1: Escalar Infraestructura	___	"Llevar TikTok a estado listo para producción con conjunto completo de características.
+Optimizar automatización de TikTok para escala.
+Implementar procedimientos de mantenimiento específicos de TikTok.
+Lograr tasa objetivo de detección y tasa de captura."	"Llevar Instagram a estado listo para producción con conjunto completo de características.
+Optimizar automatización de Instagram para escala.
+Implementar procedimientos de mantenimiento específicos de Instagram.
+Lograr tasa objetivo de detección y tasa de captura."	"Llevar YouTube a estado listo para producción con conjunto completo de características.
+Optimizar automatización de YouTube para escala.
+Implementar procedimientos de mantenimiento específicos de YouTube.
+Lograr tasa objetivo de detección y tasa de captura."	"Llevar Facebook a estado listo para producción con conjunto completo de características.
+Optimizar automatización de Facebook para escala.
+Implementar procedimientos de mantenimiento específicos de Facebook.
+Lograr tasa objetivo de detección y tasa de captura."	"Evaluar y priorizar expansión de plataforma adicional.
+Evaluar demanda de clientes para Twitter/X, Snapchat, Pinterest, LinkedIn, Reddit.
+Planificar integración de plataforma e-commerce (Amazon, MercadoLibre).
+Investigar integración de plataforma streaming (Netflix, Spotify)."
+M3.2: Entregables al Cliente	___	"Asegurar que TikTok soporte todas las características cara al cliente.
+Implementar generación de insights específica de TikTok.
+Construir reportes de inteligencia competitiva de TikTok.
+Crear análisis de tendencias de TikTok."	"Asegurar que Instagram soporte todas las características cara al cliente.
+Implementar generación de insights específica de Instagram.
+Construir reportes de inteligencia competitiva de Instagram.
+Crear análisis de tendencias de Instagram."	"Asegurar que YouTube soporte todas las características cara al cliente.
+Implementar generación de insights específica de YouTube.
+Construir reportes de inteligencia competitiva de YouTube.
+Crear análisis de tendencias de YouTube."	"Asegurar que Facebook soporte todas las características cara al cliente.
+Implementar generación de insights específica de Facebook.
+Construir reportes de inteligencia competitiva de Facebook.
+Crear análisis de tendencias de Facebook."	"Construir capacidades de inteligencia entre plataformas.
+Crear reportes de comparación de plataforma para clientes.
+Implementar seguimiento de campañas multi-plataforma.
+Soportar solicitudes de expansión de plataforma de clientes."
+M3.3: Excelencia Operacional	___	"Documentar procedimientos operacionales de TikTok.
+Crear playbooks de solución de problemas de TikTok.
+Construir monitoreo y respuesta a cambios de TikTok.
+Mantener experiencia en plataforma TikTok."	"Documentar procedimientos operacionales de Instagram.
+Crear playbooks de solución de problemas de Instagram.
+Construir monitoreo y respuesta a cambios de Instagram.
+Mantener experiencia en plataforma Instagram."	"Documentar procedimientos operacionales de YouTube.
+Crear playbooks de solución de problemas de YouTube.
+Construir monitoreo y respuesta a cambios de YouTube.
+Mantener experiencia en plataforma YouTube."	"Documentar procedimientos operacionales de Facebook.
+Crear playbooks de solución de problemas de Facebook.
+Construir monitoreo y respuesta a cambios de Facebook.
+Mantener experiencia en plataforma Facebook."	"Documentar procedimientos de expansión de plataforma.
+Crear framework de evaluación de plataforma.
+Construir sistema de monitoreo de cambios de plataforma.
+Mantener experiencia multi-plataforma."
+M3: Escala y Operaciones de Producción	___	"TikTok listo para producción con características cara al cliente, insights, análisis de tendencias y procedimientos operacionales."	"Instagram listo para producción con características cara al cliente, insights, análisis de tendencias y procedimientos operacionales."	"YouTube listo para producción con características cara al cliente, insights, análisis de tendencias y procedimientos operacionales."	"Facebook listo para producción con características cara al cliente, insights, análisis de tendencias y procedimientos operacionales."	"Framework de expansión de plataforma listo para Twitter/X, Snapchat, Pinterest, e-commerce y plataformas streaming."
+Proyecto: Persona - Sistema de Inteligencia de Panel Automatizado	COMPLETADO	"Automatización confiable de TikTok con captura completa de anuncios, inteligencia competitiva y análisis de tendencias."	"Automatización confiable de Instagram con captura completa de anuncios, inteligencia competitiva y análisis de tendencias."	"Automatización confiable de YouTube con captura completa de anuncios, inteligencia competitiva y análisis de tendencias."	"Automatización confiable de Facebook con captura completa de anuncios, inteligencia competitiva y análisis de tendencias."	"Arquitectura escalable multi-plataforma lista para expansión basada en demanda de clientes y prioridades de mercado."

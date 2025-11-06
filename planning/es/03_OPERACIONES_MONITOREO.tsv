@@ -1,0 +1,178 @@
+Hito	Fecha Objetivo	Monitoreo y Alertas	Pipeline de Datos	Dashboards	APIs	Gestión de Costos	Entregables al Cliente
+M1.1: Configuración de Infraestructura y Datos	___	"Configurar monitoreo básico de salud de contenedores.
+Planificar requisitos de monitoreo.
+Definir métricas clave a rastrear.
+Documentar enfoque de monitoreo."	"Configurar colecciones Firestore para actividades y anuncios.
+Configurar estructura de bucket GCS para capturas de pantalla y perfiles.
+Planificar arquitectura de flujo de datos.
+Documentar estrategia de almacenamiento."	"Sin dashboards aún - solo monitoreo manual.
+Planificar requisitos de dashboard.
+Definir necesidades de usuario de dashboard.
+Documentar objetivos de dashboard."	"Sin APIs aún.
+Planificar requisitos de API.
+Definir casos de uso de API.
+Documentar objetivos de API."	"Documentar enfoque de seguimiento de costos.
+Planificar atribución de costos por persona.
+Definir componentes de costo a rastrear.
+Configurar plantillas de estimación de costos."	"Solo interno - sin entregables al cliente aún.
+Planificar tipos de entregables futuros al cliente.
+Definir necesidades de reporte de clientes.
+Documentar objetivos de entregables."
+M1.2: Automatización y Comportamiento Central	___	"Implementar verificaciones de salud de contenedores.
+Configurar logging básico a Firestore.
+Crear procedimientos de inspección manual de logs.
+Probar cobertura de monitoreo."	"Implementar logging de eventos de actividad a Firestore.
+Construir pipeline de captura de capturas de pantalla a GCS.
+Probar confiabilidad de pipeline de datos.
+Validar integridad de datos."	"Usar inspección manual de logs.
+Definir requisitos de dashboard.
+Diseñar mockups de dashboard.
+Planificar implementación de dashboard."	"Definir requisitos de API interna.
+Planificar arquitectura de API.
+Diseñar endpoints de API.
+Documentar especificaciones de API."	"Implementar plantillas de documentación de costos.
+Rastrear costos de cómputo, almacenamiento y proxy.
+Calcular costo por persona.
+Monitorear costos reales vs estimados."	"Enfocarse en operaciones internas.
+Documentar necesidades de reporte interno.
+Planificar transición a cara al cliente.
+Definir propuestas de valor para clientes."
+M1.3: Integración y Validación	___	"Validar cobertura de monitoreo.
+Probar procedimientos de alertas manualmente.
+Medir confiabilidad de monitoreo.
+Documentar brechas de monitoreo."	"Validar integridad de datos de Firestore.
+Probar almacenamiento y recuperación de capturas de pantalla en GCS.
+Medir rendimiento de pipeline de datos.
+Documentar problemas de datos encontrados."	"Validar efectividad de monitoreo manual.
+Probar requisitos de dashboard.
+Evaluar prioridad de dashboard.
+Documentar especificaciones de dashboard."	"Validar requisitos de API.
+Probar necesidades de API interna.
+Evaluar prioridad de API.
+Documentar especificaciones de API."	"Calcular costo real por persona.
+Comparar con estimaciones.
+Crear reporte de costos base.
+Identificar oportunidades de optimización de costos."	"Crear reporte de métricas base.
+Documentar resultados de prueba de concepto.
+Evaluar preparación para siguiente fase.
+Planificar transición a entregables al cliente."
+M1: Fundamentos y Prueba de Concepto	___	"Monitoreo básico de salud de contenedores con procedimientos de inspección manual de logs."	"Logging de actividad a Firestore y pipeline de capturas de pantalla a GCS operacional."	"Enfoque de monitoreo manual con requisitos de dashboard definidos."	"Requisitos de API interna definidos y especificaciones documentadas."	"Plantillas de seguimiento de costos implementadas con costo base por persona establecido."	"Operaciones solo internas con métricas base y validación de prueba de concepto completa."
+M2.1: Expansión de Plataformas	___	"Extender monitoreo para rastrear actividad multi-plataforma.
+Agregar métricas específicas de plataforma.
+Probar monitoreo a escala.
+Alertar sobre problemas específicos de plataforma."	"Extender pipeline de datos para datos multi-plataforma.
+Implementar logging específico de plataforma.
+Probar manejo de volumen de datos.
+Validar consistencia de datos entre plataformas."	"Planificar dashboards multi-plataforma.
+Diseñar vistas de comparación de plataformas.
+Definir métricas específicas de plataforma.
+Probar prototipos de dashboard."	"Planificar endpoints de API multi-plataforma.
+Diseñar consultas específicas de plataforma.
+Definir límites de tasa de API.
+Probar arquitectura de API."	"Rastrear costos por plataforma.
+Monitorear escalado de costos con plataformas.
+Actualizar modelos de costos.
+Alertar sobre violaciones de umbral de costos."	"Planificar reportes internos multi-plataforma.
+Diseñar reportes de comparación de plataformas.
+Probar generación de reportes.
+Validar precisión de reportes."
+M2.2: IA y Comportamiento Avanzado	___	"Implementar sistema de alertas de detección (Slack/email).
+Agregar monitoreo de métricas de captura de anuncios.
+Construir dashboards de seguimiento de costos.
+Configurar alertas de tiempo real vs presupuesto."	"Implementar event sourcing para todas las actividades.
+Integrar BigQuery para análisis de series temporales.
+Extender Elasticsearch para búsqueda de texto completo de anuncios.
+Implementar políticas de ciclo de vida de datos."	"Construir dashboard en vivo de estado de persona (activo, pausado, detectado).
+Crear galería de captura de anuncios con filtros (plataforma, fecha, persona).
+Implementar feed de actividad mostrando acciones en tiempo real.
+Agregar dashboard de seguimiento de costos con desglose de componentes."	"Crear API interna para consultar estado de persona e historial de actividad.
+Diseñar API de integración Stream A para consultar datos de anuncios de persona.
+Implementar autenticación y limitación de tasa de API.
+Probar rendimiento y confiabilidad de API."	"Optimizar costos de cómputo (ajuste de tamaño, instancias preemptibles).
+Optimizar costos de almacenamiento (compresión, políticas de ciclo de vida).
+Implementar optimización de costos de LLM (caché, procesamiento por lotes).
+Establecer objetivo de costo $___ /persona/mes."	"Generar reportes internos sobre patrones de exposición de anuncios.
+Crear reportes de insights de targeting.
+Construir vistas de inteligencia competitiva.
+Probar automatización de generación de reportes."
+M2.3: Monitoreo y APIs	___	"Construir dashboards completos de monitoreo.
+Implementar alertas automatizadas para todas las métricas clave.
+Configurar detección de anomalías.
+Crear automatización de verificación de salud."	"Optimizar rendimiento de pipeline de datos.
+Implementar verificaciones de calidad de datos.
+Construir automatización de archivado de datos.
+Probar pipeline a escala."	"Completar suite de dashboard interno.
+Agregar controles de acceso de usuario.
+Implementar personalización de dashboard.
+Recoger retroalimentación de usuario e iterar."	"Completar implementación de API interna.
+Construir documentación de API (Swagger/OpenAPI).
+Implementar monitoreo y logging de API.
+Probar API a escala."	"Implementar seguimiento completo de costos.
+Construir dashboards de optimización de costos.
+Configurar alertas automatizadas de costos.
+Crear herramientas de pronóstico de costos."	"Finalizar plantillas de reporte interno.
+Automatizar generación de reportes.
+Probar distribución de reportes.
+Planificar transición a reportes cara al cliente."
+M2: Multi-Plataforma e Inteligencia	___	"Sistema de alertas de detección con métricas de captura de anuncios, seguimiento de costos y monitoreo de presupuesto en tiempo real."	"Event sourcing, análisis BigQuery e integración Elasticsearch con políticas de ciclo de vida de datos."	"Dashboard en vivo de estado de persona, galería de captura de anuncios, feed de actividad y visualización de seguimiento de costos."	"API interna para estado/actividad de persona y API de integración Stream A con autenticación y limitación de tasa."	"Costos de cómputo, almacenamiento y LLM optimizados con objetivo de $___/persona/mes logrado."	"Reportes internos de exposición de anuncios, insights de targeting y vistas de inteligencia competitiva operacionales."
+M3.1: Escalar Infraestructura	___	"Desplegar stack completo de observabilidad (Prometheus, Grafana, PagerDuty/Slack).
+Implementar seguimiento de SLA (uptime, tasa de detección, tasa de captura de anuncios).
+Construir verificaciones automatizadas de salud y detección de anomalías.
+Crear alertas completas para todas las métricas críticas."	"Implementar pipeline de datos de nivel de producción con respaldo y recuperación ante desastres.
+Definir e implementar políticas de retención de datos.
+Desplegar reglas de captura selectiva enfocándose en anuncios de alto valor.
+Optimizar BigQuery con particionamiento y clustering."	"Escalar dashboards para carga de producción.
+Implementar visualizaciones avanzadas.
+Agregar vistas de análisis predictivo.
+Optimizar rendimiento de dashboard."	"Escalar APIs para tráfico de producción.
+Implementar características avanzadas de API.
+Construir análisis y monitoreo de API.
+Optimizar rendimiento de API."	"Establecer objetivo de costo de $___ /persona/mes.
+Implementar optimización automatizada de costos.
+Construir modelos de predicción de costos.
+Configurar alertas y umbrales de presupuesto."	"Transición a reportes cara al cliente.
+Construir cadencia de reporte automatizado.
+Implementar solicitudes de reportes personalizados.
+Probar entrega de reportes a clientes."
+M3.2: Entregables al Cliente	___	"Construir vistas de monitoreo accesibles para clientes.
+Implementar acceso basado en roles para alertas.
+Crear dashboards específicos de clientes.
+Probar experiencia de monitoreo de clientes."	"Construir capacidades de acceso a datos de clientes.
+Implementar características de exportación de datos.
+Crear automatización de entrega de datos.
+Probar acceso a datos de clientes."	"Construir dashboards cara al cliente para inteligencia de targeting, monitoreo competitivo, análisis creativo.
+Implementar control de acceso basado en roles.
+Crear vistas de dashboard personalizables.
+Recoger retroalimentación de clientes e iterar."	"Crear API de cliente con documentación completa.
+Implementar limitación de tasa, autenticación, monitoreo de API.
+Construir onboarding de API de cliente.
+Soportar integración de API de cliente."	"Construir reportes de transparencia de costos de clientes.
+Implementar asignación de costos por cliente.
+Crear recomendaciones de optimización de costos.
+Soportar discusiones de costos con clientes."	"Construir generación automatizada de reportes (inteligencia de anuncios semanal/mensual).
+Crear reportes de insights de targeting (qué demografía ve qué anuncios).
+Construir alertas y reportes de monitoreo competitivo.
+Implementar reportes de análisis creativo (formatos, mensajería).
+Crear servicio de alertas para nuevos anuncios y campañas de competidores.
+Construir constructor de reportes personalizados accesible vía API o UI."
+M3.3: Excelencia Operacional	___	"Completar runbooks de monitoreo (problemas comunes, resoluciones).
+Crear procedimientos de mantenimiento de monitoreo.
+Implementar respaldo de sistema de monitoreo.
+Documentar mejores prácticas de monitoreo."	"Crear playbooks de solución de problemas de pipeline de datos.
+Construir procedimientos de recuperación de datos.
+Implementar monitoreo de calidad de datos.
+Documentar estándares de gobernanza de datos."	"Completar procedimientos operacionales de dashboard.
+Crear guías de mantenimiento de dashboard.
+Implementar procedimientos de respaldo de dashboard.
+Documentar mejores prácticas de dashboard."	"Completar procedimientos operacionales de API.
+Crear guías de solución de problemas de API.
+Implementar automatización de mantenimiento de API.
+Documentar mejores prácticas de API."	"Crear runbooks de gestión de costos.
+Construir procedimientos de optimización de costos.
+Implementar automatización de seguimiento de costos.
+Documentar mejores prácticas de gestión de costos."	"Crear procedimientos de calidad de entregables.
+Construir loops de retroalimentación de clientes.
+Implementar procesos de mejora de entregables.
+Documentar estándares de entregables."
+M3: Escala y Operaciones de Producción	___	"Observabilidad de producción con seguimiento de SLA, verificaciones automatizadas de salud y alertas completas."	"Pipeline de datos de nivel de producción con recuperación ante desastres, políticas de retención y reglas de captura selectiva."	"Dashboards a escala de producción con visualizaciones avanzadas, análisis predictivo y rendimiento óptimo."	"APIs de producción escaladas para tráfico con características avanzadas, análisis y optimización de rendimiento."	"Gestión de costos de producción con objetivo de $___/persona/mes, optimización automatizada y predicción."	"Reportes automatizados cara al cliente con personalización, alertas de monitoreo competitivo y análisis creativo."
+Proyecto: Persona - Sistema de Inteligencia de Panel Automatizado	COMPLETADO	"Sistema completo de monitoreo y alertas proporcionando visibilidad operacional completa y seguimiento de SLA."	"Arquitectura de datos robusta con pipeline de producción, capacidades de respaldo/recuperación y acceso a datos de clientes."	"Dashboards cara al cliente entregando inteligencia de targeting, monitoreo competitivo y análisis creativo."	"APIs completamente documentadas habilitando integración de clientes con limitación de tasa, autenticación y monitoreo."	"Operaciones transparentes en costos con asignación por cliente, automatización de optimización y precisión de pronóstico."	"Reportes automatizados de inteligencia incluyendo insights semanales/mensuales, análisis de targeting y alertas de competidores."

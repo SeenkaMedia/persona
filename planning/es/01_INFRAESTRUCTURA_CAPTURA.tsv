@@ -1,0 +1,176 @@
+Hito	Fecha Objetivo	Infraestructura y Orquestación	Modelos de Datos y Almacenamiento	Cuentas y Credenciales	Dispositivos y Fingerprinting	Proxies y Red	Anti-Detección
+M1.1: Configuración de Infraestructura y Datos	___	"Configurar cluster GKE para contenedores de personas.
+Desplegar Selenium/Puppeteer con plugins stealth.
+Configurar procedimientos de escalado manual.
+Habilitar acceso VNC para debugging."	"Diseñar esquema PostgreSQL para personas, dispositivos, cuentas.
+Crear colecciones Firestore para actividades y anuncios.
+Definir modelo de datos de persona (demografía, intereses, estado).
+Definir modelo de datos de dispositivo (componentes de fingerprint, configuración de proxy)."	"Evaluar opciones de obtención de cuentas (API Media Service, manual, otras).
+Definir enfoque de almacenamiento de credenciales.
+Planificar 1-2 cuentas por persona por plataforma.
+No se necesita estrategia de rotación aún."	"Implementar fingerprinting básico de navegador.
+Configurar user agent, resolución de pantalla, zona horaria, idioma.
+Solo Desktop/Chrome - sin móvil aún.
+Almacenar fingerprint en tabla de dispositivos de PostgreSQL."	"Integrar con pool de proxies de Elasticsearch de scraping.
+Diseñar estrategia de asignación de IP sticky.
+Documentar requisitos de acceso a proxies.
+Planificar proveedor comercial OxyLabs."	"Implementar aleatorización básica de tiempo entre acciones.
+Agregar retrasos con variación aleatoria.
+Sin realismo Comportamental avanzado aún.
+Documentar enfoque de limitación de tasa."
+M1.2: Automatización y Comportamiento Central	___	"Implementar pipeline de despliegue de contenedores.
+Configurar gestión de ciclo de vida de contenedores.
+Configurar monitoreo de salud básico.
+Probar procedimientos de reinicio de contenedores."	"Implementar operaciones CRUD de personas.
+Crear flujo de registro de dispositivos.
+Construir almacenamiento y recuperación de cuentas.
+Probar integridad de datos."	"Implementar asignación de cuentas a personas.
+Construir sistema de recuperación de credenciales.
+Crear procedimientos de creación manual de cuentas.
+Documentar seguimiento de estado de cuentas."	"Generar fingerprints para cada dispositivo.
+Implementar persistencia de fingerprint.
+Probar consistencia de fingerprint entre sesiones.
+Validar unicidad entre personas."	"Implementar lógica de asignación de proxy por persona.
+Construir verificación de salud de proxy.
+Probar estabilidad de conexión de proxy.
+Monitorear uso y costos de proxy."	"Construir lógica de limitación de tasa para mantenerse por debajo de umbrales de plataforma.
+Implementar patrones de scroll similares a humanos.
+Agregar pausas aleatorias entre acciones.
+Probar evasión de detección en TikTok."
+M1.3: Integración y Validación	___	"Probar estabilidad de contenedor durante ___ días.
+Medir tiempos de inicio/apagado de contenedor.
+Validar precisión de verificación de salud.
+Documentar problemas de infraestructura encontrados."	"Validar completitud del modelo de datos.
+Probar rendimiento de recuperación de datos.
+Verificar restricciones de integridad de datos.
+Identificar campos faltantes o problemas de esquema."	"Probar confiabilidad de recuperación de cuentas.
+Validar seguridad de credenciales.
+Documentar patrones de uso de cuentas.
+Evaluar salud de cuentas a lo largo del tiempo."	"Validar unicidad de fingerprint.
+Probar persistencia de fingerprint.
+Medir riesgo de detección de fingerprint.
+Documentar cualquier rechazo de plataforma."	"Validar lógica de asignación de proxy.
+Probar estabilidad de proxy bajo carga.
+Medir costos reales de proxy.
+Documentar incidentes de detección relacionados con proxy."	"Medir tasa de detección durante ___ días.
+Documentar comportamientos observados de plataforma.
+Evaluar efectividad de variación de tiempo.
+Refinar parámetros anti-detección."
+M1: Fundamentos y Prueba de Concepto	___	"Cluster GKE operacional con personas en contenedores y debugging VNC."	"Esquemas PostgreSQL y Firestore desplegados con modelos de persona, dispositivo y cuenta."	"Enfoque de obtención de cuentas establecido con procedimientos de creación manual."	"Fingerprinting de navegador de escritorio funcionando con unicidad básica."	"Integración de proxy con infraestructura de scraping validada."	"Aleatorización básica de tiempo y limitación de tasa protegiendo contra detección."
+M2.1: Expansión de Plataformas	___	"Escalar GKE para soportar múltiples plataformas por persona.
+Optimizar asignación de recursos de contenedor.
+Probar acceso concurrente a plataformas.
+Monitorear costos de infraestructura a escala."	"Extender modelos de datos para soporte multi-plataforma.
+Agregar campos de configuración específicos de plataforma.
+Soportar múltiples cuentas por persona.
+Rastrear relaciones de actividad entre plataformas."	"Implementar obtención de cuentas multi-plataforma.
+Construir mapeo cuenta-plataforma.
+Planificar framework de rotación de cuentas (no implementado aún).
+Monitorear salud de cuenta por plataforma."	"Agregar emulación de dispositivo móvil usando Appium.
+Implementar fingerprinting de Android.
+Implementar fingerprinting de iOS.
+Configurar patrones realistas de cambio de dispositivo."	"Extender pool de proxies para uso multi-plataforma.
+Monitorear rendimiento de proxy por plataforma.
+Probar concepto de compartición de IP a nivel de hogar.
+Rastrear costos de proxy por plataforma."	"Adaptar anti-detección por plataforma.
+Implementar límites de tasa específicos de plataforma.
+Probar tasas de detección entre plataformas.
+Documentar comportamientos específicos de plataforma."
+M2.2: IA y Comportamiento Avanzado	___	"Desplegar auto-escalado basado en cantidad de personas.
+Implementar verificaciones de salud y reinicio automático.
+Optimizar imágenes de contenedor para inicio más rápido.
+Agregar manejo de apagado elegante."	"Construir perfiles ricos de personas con intereses, rasgos de personalidad.
+Implementar gráfico de intereses con puntajes de tópicos.
+Agregar modelo de datos de hogar.
+Soportar evolución de patrón Comportamental a lo largo del tiempo."	"Soportar múltiples cuentas por persona entre plataformas.
+Implementar manejo de tokens de actualización de credenciales.
+Planificar estrategia de rotación de cuentas.
+Construir monitoreo de salud de cuentas."	"Implementar fingerprinting avanzado: canvas, WebGL, audio.
+Agregar control de enumeración de fuentes.
+Implementar suplantación de información de hardware.
+Probar confiabilidad de emulación móvil."	"Implementar asignación de proxy a nivel de hogar.
+Construir rotación de proxy en eventos de detección.
+Monitorear salud de proxy y reemplazar IPs quemadas.
+Probar enfoque de diversidad de ISP."	"Agregar imperfecciones humanas: errores de tipeo, clics fallidos, distracciones.
+Implementar variaciones de energía según hora del día.
+Agregar pausas ocasionales y períodos offline.
+Probar mejoras de realismo Comportamental."
+M2.3: Monitoreo y APIs	___	"Construir dashboards de salud de contenedores.
+Implementar sistema de alertas de detección.
+Configurar alertas de seguimiento de costos.
+Configurar verificaciones automáticas de salud."	"Optimizar consultas de base de datos.
+Implementar estrategia de archivado de datos.
+Agregar índices para consultas comunes.
+Monitorear rendimiento de base de datos."	"Construir monitoreo de estado de cuentas.
+Crear alertas de problemas de cuentas.
+Rastrear patrones de uso de cuentas.
+Planificar flujo de reemplazo de cuentas."	"Monitorear métricas de rendimiento de dispositivos.
+Rastrear patrones de uso de dispositivos.
+Construir herramientas de planificación de rotación de dispositivos.
+Alertar sobre fallos de dispositivos."	"Construir dashboard de monitoreo de proxy.
+Rastrear costos de proxy en tiempo real.
+Alertar sobre agotamiento de proxy.
+Monitorear eventos de detección por proxy."	"Rastrear incidentes de detección por tipo.
+Medir efectividad anti-detección.
+Construir análisis de patrones de detección.
+Alertar sobre picos de tasa de detección."
+M2: Multi-Plataforma e Inteligencia	___	"Infraestructura de auto-escalado soportando móvil y escritorio en múltiples plataformas."	"Perfiles ricos de personas con hogares, gráficos de intereses y evolución Comportamental."	"Gestión multi-cuenta por persona con monitoreo de salud."	"Fingerprinting móvil (Android/iOS) y escritorio con técnicas avanzadas (canvas, WebGL, audio)."	"Asignación de proxy a nivel de hogar con rotación en eventos de detección."	"Imperfecciones humanas y variaciones según hora del día creando patrones Comportamentales realistas."
+M3.1: Escalar Infraestructura	___	"Escalar para soportar ___ personas ejecutándose 24/7.
+Implementar orquestación de nivel de producción.
+Optimizar asignación de recursos (CPU, memoria).
+Desplegar anti-afinidad de pods para distribución."	"Escalar modelos de datos para volumen de producción.
+Implementar estrategias de particionamiento de datos.
+Optimizar costos de almacenamiento.
+Agregar políticas de retención de datos."	"Implementar rotación automatizada de cuentas.
+Construir puntuación de salud de cuentas.
+Mantener buffer de cuentas de respaldo.
+Automatizar reemplazo de cuentas ante problemas."	"Evaluar granjas de dispositivos virtuales vs físicos.
+Implementar gestión de ciclo de vida de dispositivos.
+Soportar modelos diversos de dispositivos y versiones de SO.
+Construir estrategias de rotación de dispositivos."	"Optimizar costos de proxy para escala de producción.
+Evaluar red de proxy personalizada vs comercial.
+Expandir pool de proxies con diversidad de ISP.
+Implementar lógica avanzada de rotación."	"Desplegar aprendizaje continuo desde eventos de detección.
+Implementar estrategias anti-detección adaptativas.
+Asegurar diversidad Comportamental entre personas.
+Maximizar unicidad de fingerprint."
+M3.2: Entregables al Cliente	___	"Documentar arquitectura de infraestructura.
+Crear procedimientos de escalado.
+Construir herramientas de planificación de capacidad.
+Optimizar para eficiencia de costos."	"Documentar modelos de datos para clientes.
+Construir capacidades de exportación de datos.
+Crear APIs de acceso a datos.
+Asegurar estándares de calidad de datos."	"Documentar procedimientos de ciclo de vida de cuentas.
+Construir dashboards de gestión de cuentas.
+Crear APIs de estado de cuentas.
+Implementar reporte de cuentas."	"Documentar configuraciones de dispositivos.
+Construir monitoreo de estado de dispositivos.
+Crear APIs de gestión de dispositivos.
+Soportar solicitudes de dispositivos de clientes."	"Documentar arquitectura de proxy.
+Construir dashboards de estado de proxy.
+Crear reportes de costos de proxy.
+Soportar cambios de configuración de proxy."	"Documentar estrategias anti-detección.
+Construir dashboards de monitoreo de detección.
+Crear reportes de incidentes de detección.
+Soportar ajuste anti-detección."
+M3.3: Excelencia Operacional	___	"Completar runbooks de infraestructura.
+Implementar procedimientos de recuperación ante desastres.
+Crear dashboards de monitoreo de infraestructura.
+Construir sistemas automatizados de respaldo."	"Implementar respaldos completos de datos.
+Crear procedimientos de recuperación de datos.
+Construir monitoreo de calidad de datos.
+Documentar gobernanza de datos."	"Implementar rotación automatizada de cuentas con buffer.
+Crear procedimientos de emergencia de cuentas.
+Construir predicción de salud de cuentas.
+Documentar protocolos de reemplazo de cuentas."	"Crear guías de solución de problemas de dispositivos.
+Construir procedimientos de reemplazo de dispositivos.
+Implementar monitoreo de salud de dispositivos.
+Documentar estándares de configuración de dispositivos."	"Crear guías de solución de problemas de proxy.
+Construir procedimientos de reemplazo de proxy.
+Implementar predicción de salud de proxy.
+Documentar estándares de configuración de proxy."	"Construir sistemas de monitoreo anti-detección.
+Crear playbooks de respuesta a detección.
+Implementar respuestas automatizadas a detección.
+Documentar mejores prácticas anti-detección."
+M3: Escala y Operaciones de Producción	___	"Orquestación a escala de producción con gestión automatizada de recursos y recuperación ante desastres."	"Arquitectura de datos de producción con particionamiento, políticas de retención y respaldos completos."	"Gestión automatizada de ciclo de vida de cuentas con rotación, puntuación de salud y reemplazo."	"Granja de dispositivos virtuales/físicos con gestión de ciclo de vida soportando modelos diversos y versiones de SO."	"Infraestructura de proxy optimizada para producción con diversidad de ISP y lógica avanzada de rotación."	"Anti-detección adaptativa con aprendizaje continuo y diversidad Comportamental entre todas las personas."
+Proyecto: Persona - Sistema de Inteligencia de Panel Automatizado	COMPLETADO	"Infraestructura escalable capaz de soportar cientos de personas con gestión automatizada y capacidades de auto-reparación."	"Arquitectura de datos completa habilitando identidad de persona, seguimiento Comportamental y análisis a escala."	"Sistema robusto de gestión de cuentas con procedimientos automatizados de obtención, rotación y recuperación."	"Fingerprinting de dispositivos listo para producción para todas las plataformas con máxima unicidad y detección mínima."	"Infraestructura de proxy optimizada en costos con realismo a nivel de hogar y capacidades de respuesta a detección."	"Sistema sofisticado anti-detección indistinguible de usuarios reales con adaptación continua."

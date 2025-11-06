@@ -1,0 +1,212 @@
+Hito	Fecha Objetivo	Calidad y Validación	Coordinación Stream A	Coordinación de Infraestructura	Recursos y Planificación	Riesgo y Cumplimiento	Documentación y Entrega
+M1.1: Configuración de Infraestructura y Datos	___	"Definir formatos y procedimientos de prueba.
+Planificar enfoque de validación para detección de anuncios.
+Establecer línea base de métricas de calidad.
+Documentar criterios de aceptación."	"Identificar puntos de integración con Stream A (Zaca).
+Definir requisitos de compartición de datos.
+Planificar protocolos de comunicación.
+Documentar enfoque de coordinación."	"Definir requisitos de recursos compartidos (Elasticsearch, proxies).
+Planificar integración con infraestructura de scraping.
+Documentar requisitos de acceso.
+Establecer canales de coordinación."	"Definir roles y responsabilidades del equipo.
+Planificar controles de acceso y permisos.
+Crear estimaciones iniciales de recursos.
+Establecer requisitos de pista de auditoría."	"Documentar consideraciones legales y éticas.
+Definir enfoque de cumplimiento de Términos de Servicio.
+Planificar requisitos de privacidad de datos.
+Evaluar riesgos de política de plataforma."	"Establecer estándares de documentación.
+Crear documentación inicial de arquitectura.
+Definir convenciones de formato de documentación.
+Planificar enfoque de transferencia de conocimiento."
+M1.2: Automatización y Comportamiento Central	___	"Implementar procedimientos de revisión manual.
+Crear framework de pruebas de integración.
+Construir listas de verificación de validación.
+Probar flujos de trabajo de extremo a extremo."	"Establecer reuniones de sincronización regulares con Stream A.
+Compartir aprendizajes y datos iniciales.
+Coordinar obtención de cuentas.
+Probar intercambio inicial de datos."	"Coordinar acceso al pool de proxies con scraping.
+Probar integración de Elasticsearch.
+Validar acceso a bucket GCS.
+Compartir aprendizajes de infraestructura."	"Asignar recursos de desarrollo.
+Rastrear tiempo real vs estimaciones.
+Monitorear costos de infraestructura.
+Actualizar proyecciones de recursos."	"Implementar monitoreo de ToS de plataforma.
+Crear listas de verificación de cumplimiento.
+Documentar procedimientos de mitigación de riesgo.
+Probar protocolos de seguridad de cuentas."	"Documentar enfoque de automatización central.
+Crear guía de primitivas Comportamentales.
+Escribir procedimientos de integración.
+Construir base de conocimiento interna."
+M1.3: Integración y Validación	___	"Completar validación de prueba de concepto.
+Medir métricas de precisión de detección de anuncios.
+Calcular tasas de precisión y recall.
+Documentar resultados de validación."	"Compartir resultados de M1 con Stream A.
+Identificar fuentes de datos complementarias.
+Planificar enfoque de modelo híbrido.
+Documentar lecciones aprendidas de coordinación."	"Validar todas las integraciones de infraestructura.
+Medir uso de recursos compartidos.
+Documentar problemas de integración.
+Planificar mejoras de infraestructura."	"Calcular costos reales por persona.
+Crear reporte de recursos base.
+Evaluar estimaciones M1 vs reales.
+Planificar requisitos de recursos M2."	"Completar evaluación de riesgo M1.
+Documentar incidentes y respuestas.
+Actualizar procedimientos de cumplimiento.
+Evaluar retroalimentación legal."	"Completar paquete de documentación M1.
+Crear reporte de prueba de concepto.
+Documentar decisiones técnicas.
+Construir lecciones aprendidas M1."
+M1: Fundamentos y Prueba de Concepto	___	"Viabilidad técnica validada con métricas de calidad.
+Framework de pruebas de integración establecido.
+Procedimientos de validación manual funcionando."	"Coordinación Stream A establecida.
+Compartición inicial de datos validada.
+Enfoque de modelo híbrido definido."	"Integraciones de infraestructura validadas.
+Acceso a recursos compartidos confirmado.
+Canales de coordinación funcionando."	"Costos base y estimaciones establecidos.
+Roles de equipo definidos y dotados de personal.
+Planificación M2 completa."	"Framework legal y de cumplimiento establecido.
+Monitoreo de política de plataforma activo.
+Procedimientos de mitigación de riesgo documentados."	"Documentación M1 completa.
+Base de conocimiento establecida.
+Fundamentos técnicos documentados."
+M2.1: Expansión de Plataformas	___	"Validar precisión de detección de anuncios entre plataformas.
+Probar tasas de falsos positivos por plataforma.
+Medir consistencia entre plataformas.
+Documentar problemas específicos de plataforma."	"Compartir aprendizajes multi-plataforma con Stream A.
+Coordinar prioridades de plataforma.
+Planificar estandarización de formato de datos.
+Probar consultas entre streams."	"Expandir infraestructura compartida para multi-plataforma.
+Coordinar asignación de proxy entre plataformas.
+Probar escalado de infraestructura.
+Monitorear contención de recursos."	"Planificar asignación de recursos multi-plataforma.
+Rastrear costos por plataforma.
+Actualizar proyecciones de capacidad.
+Evaluar necesidades de escalado de equipo."	"Extender cumplimiento a Instagram, YouTube, Facebook.
+Monitorear cambios de política específicos de plataforma.
+Actualizar evaluaciones de riesgo por plataforma.
+Documentar riesgos específicos de plataforma."	"Documentar implementaciones específicas de plataforma.
+Crear guías de integración de plataforma.
+Escribir docs de solución de problemas de plataforma.
+Construir documentación de comparación de plataforma."
+M2.2: IA y Comportamiento Avanzado	___	"Establecer objetivos de calidad de narrativa IA.
+Implementar verificaciones de validación automatizadas.
+Construir puntuación de realismo Comportamental.
+Crear detección de anomalías para comportamiento."	"Integrar con enriquecimiento de datos de Stream A.
+Compartir insights generados por IA.
+Coordinar inteligencia de targeting.
+Planificar enfoque de reporte híbrido."	"Optimizar uso de recursos compartidos.
+Coordinar uso de LLM con otros equipos.
+Probar integración de BigQuery.
+Compartir optimizaciones de infraestructura."	"Optimizar costos de LLM (selección de modelo, caché).
+Implementar dashboards de monitoreo de recursos.
+Planificar requisitos de escalado M3.
+Evaluar costos de características avanzadas."	"Abordar cumplimiento de contenido generado por IA.
+Monitorear incidentes de detección Comportamental.
+Actualizar estrategias anti-detección.
+Documentar consideraciones de ética de IA."	"Documentar sistema de narrativa IA.
+Crear guía de ingeniería de prompts de LLM.
+Escribir documentación de inteligencia Comportamental.
+Construir guía de solución de problemas de sistema IA."
+M2.3: Monitoreo y APIs	___	"Construir monitoreo continuo de calidad.
+Implementar pipelines de validación automatizados.
+Crear sistema de alertas de calidad.
+Establecer definiciones de SLA."	"Construir APIs de integración Stream A.
+Probar acceso híbrido a datos.
+Crear dashboards entre streams.
+Documentar patrones de integración de API."	"Construir APIs de monitoreo de infraestructura.
+Crear dashboards de uso de recursos.
+Implementar herramientas de planificación de capacidad.
+Documentar coordinación de infraestructura."	"Implementar dashboards de seguimiento de costos.
+Construir herramientas de pronóstico de recursos.
+Crear automatización de planificación de capacidad.
+Establecer umbrales de alerta de recursos."	"Implementar dashboards de monitoreo de cumplimiento.
+Construir sistema de alertas de riesgo.
+Crear herramientas de seguimiento de incidentes.
+Documentar procedimientos de respuesta a riesgo."	"Completar documentación M2.
+Crear suite de documentación de API.
+Escribir guías de monitoreo.
+Construir runbooks operacionales."
+M2: Multi-Plataforma e Inteligencia	___	"Calidad de narrativa IA validada.
+Validación automatizada funcionando.
+Monitoreo de calidad establecido."	"APIs de integración Stream A funcionando.
+Coordinación de modelo híbrido efectiva.
+Compartición de datos entre streams operacional."	"Infraestructura multi-plataforma estable.
+Compartición de recursos optimizada.
+APIs de infraestructura funcionales."	"Optimización de costos implementada.
+Pronóstico de recursos preciso.
+Planificación M3 completa."	"Cumplimiento multi-plataforma establecido.
+Monitoreo de riesgo automatizado.
+Procedimientos de respuesta a incidentes probados."	"Documentación M2 completa.
+Docs de API publicados.
+Guías operacionales establecidas."
+M3.1: Escalar Infraestructura	___	"Desplegar validación automatizada a escala.
+Implementar benchmarking de producción.
+Construir pruebas de regresión de rendimiento.
+Crear modelos de predicción de calidad."	"Coordinar despliegue de producción con Stream A.
+Implementar compartición de datos de producción.
+Construir reporte unificado al cliente.
+Probar flujos de trabajo híbridos de producción."	"Coordinar lanzamiento de infraestructura de producción.
+Implementar asignación de recursos de producción.
+Construir recuperación ante desastres de infraestructura.
+Probar procedimientos de failover."	"Ejecutar planificación de capacidad de producción.
+Implementar escalado automatizado de recursos.
+Construir automatización de optimización de costos.
+Establecer presupuestos de producción."	"Desplegar monitoreo de cumplimiento de producción.
+Implementar seguimiento automatizado de políticas.
+Construir automatización de reporte de cumplimiento.
+Establecer respuesta a incidentes de producción."	"Completar documentación de producción.
+Crear guías de despliegue de producción.
+Escribir playbooks de solución de problemas de producción.
+Construir materiales de capacitación de producción."
+M3.2: Entregables al Cliente	___	"Validar calidad de entregable al cliente.
+Implementar loops de retroalimentación de cliente.
+Construir herramientas de personalización de entregables.
+Probar precisión de reporte a cliente."	"Construir comparación cara al cliente Stream A/B.
+Implementar dashboards unificados al cliente.
+Crear reportes de inteligencia híbrida.
+Soportar consultas entre streams de cliente."	"Construir transparencia de infraestructura al cliente.
+Implementar asignación de recursos específica de cliente.
+Crear herramientas de planificación de capacidad de cliente.
+Soportar solicitudes de infraestructura de cliente."	"Implementar transparencia de costos al cliente.
+Construir dashboards de recursos de cliente.
+Crear reportes de capacidad de cliente.
+Soportar planificación de recursos de cliente."	"Proporcionar reporte de cumplimiento a cliente.
+Construir dashboards de riesgo cara al cliente.
+Crear documentación de cumplimiento para clientes.
+Soportar auditorías de cumplimiento de cliente."	"Crear documentación cara al cliente.
+Construir materiales de onboarding de cliente.
+Escribir guías de integración de cliente.
+Entregar sesiones de capacitación de cliente."
+M3.3: Excelencia Operacional	___	"Completar procedimientos de aseguramiento de calidad.
+Crear playbooks de incidentes de calidad.
+Implementar proceso de mejora continua.
+Documentar mejores prácticas de calidad."	"Establecer coordinación continua Stream A.
+Crear procedimientos operacionales entre streams.
+Construir protocolos de mantenimiento de colaboración.
+Documentar mejores prácticas de coordinación."	"Completar runbooks de coordinación de infraestructura.
+Crear procedimientos de cambio de infraestructura.
+Implementar automatización de monitoreo de infraestructura.
+Documentar mejores prácticas de infraestructura."	"Crear procedimientos de gestión de recursos.
+Construir automatización de planificación de capacidad.
+Implementar flujos de trabajo de optimización de recursos.
+Documentar mejores prácticas de gestión de recursos."	"Completar runbooks de cumplimiento.
+Crear playbooks de respuesta a riesgo.
+Implementar automatización de auditoría de cumplimiento.
+Documentar mejores prácticas de cumplimiento."	"Construir almacén unificado de documentación.
+Crear procedimientos de mantenimiento de documentación.
+Implementar sistema de gestión de conocimiento.
+Completar documentación completa del sistema."
+M3: Escala y Operaciones de Producción	___	"Validación de producción automatizada.
+Procedimientos de aseguramiento de calidad completos.
+Mejora continua activa."	"Coordinación Stream A operacional.
+Modelo híbrido entregando valor.
+Integración entre streams estable."	"Coordinación de infraestructura madura.
+Compartición de recursos optimizada.
+Recuperación ante desastres probada."	"Gestión de recursos automatizada.
+Optimización de costos continua.
+Planificación de capacidad precisa."	"Monitoreo de cumplimiento completo.
+Gestión de riesgo proactiva.
+Preparación de auditoría mantenida."	"Documentación completa y mantenida.
+Transferencia de conocimiento exitosa.
+Excelencia operacional lograda."
+Proyecto: Persona - Sistema de Inteligencia de Panel Automatizado	COMPLETADO	"Aseguramiento de calidad listo para producción con validación automatizada y mejora continua."	"Coordinación Stream A/B fluida con inteligencia unificada al cliente y reporte híbrido."	"Coordinación de infraestructura madura con compartición optimizada de recursos y recuperación ante desastres."	"Gestión automatizada de recursos con pronóstico preciso y optimización de costos."	"Monitoreo completo de cumplimiento con gestión proactiva de riesgo y preparación de auditoría."	"Almacén completo de documentación con sistema de gestión de conocimiento y excelencia operacional."

@@ -1,0 +1,176 @@
+Hito	Fecha Objetivo	Narrativas y Planificación	Primitivas	Acciones Atómicas	Integración IA/LLM	Realismo y Coherencia	Validación y Calidad
+M1.1: Configuración de Infraestructura y Datos	___	"Definir estructura y formato de narrativa.
+Crear plantillas simples de programación basada en tiempo.
+Diseñar enfoque de planificación de actividad diaria.
+Documentar parámetros de narrativa."	"Diseñar interfaz de primitivas Comportamentales.
+Definir parámetros para browse_feed, watch_video, scroll_feed.
+Planificar flujo de ejecución de primitivas.
+Documentar requisitos de primitivas."	"Planificar arquitectura de biblioteca de acciones atómicas.
+Definir acciones scroll, click, wait, screenshot.
+Diseñar enfoque de variación similar a humano.
+Documentar requisitos de acciones."	"Evaluar proveedores de LLM (GPT-4, Claude, otros).
+Definir requisitos de generación de narrativa.
+Planificar enfoque de ingeniería de prompts.
+Estimar costos de LLM."	"Definir requisitos de realismo.
+Planificar enfoque de aleatorización de tiempo.
+Diseñar patrones de pausa/descanso.
+Documentar objetivos de realismo."	"Definir criterios de validación.
+Planificar procedimientos de revisión manual.
+Diseñar enfoque de pruebas.
+Documentar requisitos de calidad."
+M1.2: Automatización y Comportamiento Central	___	"Crear generador básico de programación diaria.
+Implementar disparadores de actividad basados en tiempo.
+Construir herramientas de definición manual de programación.
+Probar ejecución de programación."	"Implementar browse_feed con parámetros de duración y engagement.
+Construir watch_video con control de tasa de finalización.
+Crear scroll_feed con variación similar a humano.
+Probar primitivas en TikTok."	"Implementar acción scroll con variación.
+Construir acción click con movimiento de mouse.
+Crear acción wait con retrasos aleatorios.
+Implementar acción screenshot para captura de anuncios."	"Configurar integración de API LLM si se elige.
+Implementar generación básica de narrativa.
+Probar efectividad de prompts.
+Monitorear costos de LLM."	"Implementar variaciones aleatorias de tiempo.
+Agregar pausas ocasionales.
+Probar realismo contra detección.
+Refinar parámetros de tiempo."	"Crear procedimientos de manejo manual de CAPTCHA.
+Definir protocolos de respuesta a problemas de cuentas.
+Documentar requisitos de intervención humana.
+Probar flujos de trabajo de intervención."
+M1.3: Integración y Validación	___	"Validar precisión de ejecución de programación.
+Probar realismo de tiempo de narrativa.
+Medir adherencia a programación.
+Documentar problemas de programación."	"Validar confiabilidad de primitivas.
+Probar rangos de parámetros de primitivas.
+Medir tasas de éxito de primitivas.
+Documentar limitaciones de primitivas."	"Validar confiabilidad de acciones.
+Probar precisión de tiempo de acciones.
+Medir tasas de fallo de acciones.
+Documentar casos extremos de acciones."	"Validar calidad de narrativa si se usa LLM.
+Medir costos reales de LLM.
+Probar variaciones de prompts.
+Evaluar velocidad de generación."	"Validar efectividad de realismo.
+Medir correlación de detección con tiempo.
+Probar rangos de variación.
+Evaluar similitud con humanos."	"Realizar sesiones de validación.
+Documentar frecuencia de CAPTCHA.
+Evaluar carga de intervención humana.
+Medir métricas de calidad."
+M1: Fundamentos y Prueba de Concepto	___	"Programación basada en tiempo con definición manual de narrativa funcionando en TikTok."	"Primitivas centrales (browse_feed, watch_video, scroll_feed) operacionales con control de parámetros."	"Biblioteca de acciones atómicas con scroll, click, wait, screenshot implementada con variación similar a humano."	"Proveedor de LLM evaluado y generación básica de narrativa probada (si se usa enfoque IA)."	"Variaciones aleatorias de tiempo y pausas creando capa inicial de realismo."	"Procedimientos de validación manual establecidos con flujos de trabajo de intervención humana para CAPTCHAs."
+M2.1: Expansión de Plataformas	___	"Extender narrativas para programaciones multi-plataforma.
+Diseñar coordinación de actividad entre plataformas.
+Construir plantillas de programación específicas de plataforma.
+Probar ejecución de narrativa multi-plataforma."	"Adaptar primitivas para Instagram (feed, Stories, Reels).
+Crear primitivas específicas de YouTube (ver videos, interacción con anuncios).
+Construir primitivas de navegación de feed de Facebook.
+Implementar detección de anuncios específica de plataforma."	"Extender acciones atómicas para gestos de Instagram.
+Agregar controles de reproductor de YouTube.
+Implementar acciones de navegación de Facebook.
+Probar acciones entre plataformas."	"Expandir prompts para narrativas multi-plataforma.
+Probar calidad de narrativa entre plataformas.
+Monitorear aumentos de costo de LLM.
+Optimizar eficiencia de prompts."	"Probar consistencia Comportamental entre plataformas.
+Validar adaptaciones específicas de plataforma.
+Medir tasas de detección por plataforma.
+Documentar comportamientos de plataforma."	"Validar primitivas en cada plataforma.
+Probar precisión de detección de anuncios por plataforma.
+Medir tasas de falsos positivos.
+Documentar problemas específicos de plataforma."
+M2.2: IA y Comportamiento Avanzado	___	"Implementar generación de narrativa diaria/semanal basada en LLM.
+Construir lógica de validación de narrativa (tiempo, tiempo de pantalla, límites).
+Crear reglas de coherencia entre plataformas.
+Probar realismo y variedad de narrativa."	"Expandir biblioteca de primitivas: búsqueda, engagement, interacción con anuncios.
+Implementar engagement específico de plataforma (like, comment, follow, share).
+Construir selección de contenido basada en intereses.
+Probar combinaciones de primitivas."	"Implementar type_text con errores y velocidad realista.
+Agregar watch_video con pausa/reanudación.
+Construir manejo completo de errores.
+Implementar lógica de reintentos."	"Integrar LLM para generación de narrativa a escala.
+Implementar caché de prompts para optimización de costos.
+Construir evolución de gráfico de intereses desde actividades.
+Validar calidad de narrativa IA."	"Implementar coherencia entre plataformas (mismos intereses entre plataformas).
+Construir correlaciones de búsqueda (anuncio en TikTok → búsqueda en YouTube).
+Agregar imperfecciones humanas (errores de tipeo, clics fallidos, distracciones).
+Implementar variaciones de energía según hora del día."	"Construir dashboard de validación de narrativa.
+Reducir intervención humana mediante automatización.
+Implementar manejo automatizado de CAPTCHA donde sea posible.
+Crear sistema de alertas para necesidades de intervención manual."
+M2.3: Monitoreo y APIs	___	"Construir monitoreo de ejecución de narrativa.
+Rastrear métricas de adherencia de narrativa.
+Crear dashboards de rendimiento de narrativa.
+Alertar sobre fallos de narrativa."	"Monitorear tasas de éxito de primitivas.
+Rastrear patrones de uso de primitivas.
+Construir dashboards de rendimiento de primitivas.
+Alertar sobre fallos de primitivas."	"Monitorear métricas de confiabilidad de acciones.
+Rastrear patrones de fallo de acciones.
+Construir herramientas de debugging de acciones.
+Alertar sobre degradación de acciones."	"Rastrear uso y costos de API LLM.
+Monitorear rendimiento de generación de narrativa.
+Construir dashboard de optimización de costos de LLM.
+Alertar sobre violaciones de umbral de costos."	"Monitorear métricas Comportamentales.
+Rastrear correlación de detección con comportamientos.
+Construir dashboards de efectividad de realismo.
+Alertar sobre anomalías Comportamentales."	"Implementar dashboard de validación de narrativa IA.
+Crear seguimiento de métricas Comportamentales.
+Construir dashboards de monitoreo de calidad.
+Configurar sistema de alertas para problemas de calidad."
+M2: Multi-Plataforma e Inteligencia	___	"Narrativas diarias/semanales generadas por LLM con coherencia entre plataformas y validación."	"Biblioteca completa de primitivas soportando Instagram, YouTube, Facebook con engagement específico de plataforma."	"Acciones atómicas extendidas con escritura (con errores), pausa/reanudación de video y manejo robusto de errores."	"Integración de LLM de producción con caché de prompts, evolución de gráfico de intereses y optimización de costos."	"Coherencia Comportamental entre plataformas con correlaciones de búsqueda e imperfecciones humanas."	"Validación automatizada de narrativa reduciendo intervención humana con sistema de alertas para casos extremos."
+M3.1: Escalar Infraestructura	___	"Implementar sistema de narrativa auto-mejorable.
+Desplegar aprendizaje desde personas exitosas.
+Construir narrativas adaptativas para cambios de plataforma.
+Generar patrones diversos entre personas."	"Mantener biblioteca completa de primitivas.
+Implementar actualizaciones regulares para cambios de plataforma.
+Construir métricas de rendimiento por primitiva.
+Lograr implementaciones optimizadas para plataforma."	"Lograr alta confiabilidad (< ___ % tasa de fallo).
+Implementar recuperación completa de errores.
+Construir detección de cambios de plataforma y alertas.
+Mantener calidad de biblioteca de acciones."	"Optimizar costos de LLM (selección de modelo, GPT-3.5 vs GPT-4).
+Implementar caché agresivo de narrativas.
+Construir procesamiento por lotes para generación de narrativa.
+Evaluar modelo afinado en comportamientos de persona."	"Lograr patrones Comportamentales indistinguibles de usuarios reales.
+Implementar evolución Comportamental de largo plazo.
+Construir reflejo de eventos de vida en comportamiento.
+Asegurar que no dos personas se comporten idénticamente."	"Implementar verificaciones automatizadas de calidad.
+Desplegar pruebas A/B para estrategias de persona.
+Construir sistemas de predicción de calidad.
+Reducir intervención humana a < ___ horas/semana."
+M3.2: Entregables al Cliente	___	"Documentar enfoque de generación de narrativa.
+Crear plantillas de narrativa para casos de uso comunes.
+Construir herramientas de configuración de narrativa.
+Proporcionar insights de narrativa a clientes."	"Documentar catálogo de primitivas Comportamentales.
+Crear guías de uso de primitivas.
+Construir herramientas de configuración de primitivas.
+Soportar comportamientos específicos de clientes."	"Documentar biblioteca de acciones atómicas.
+Crear guías de solución de problemas de acciones.
+Construir herramientas de monitoreo de acciones.
+Soportar personalización de acciones."	"Documentar sistema de narrativa IA.
+Crear guías de ingeniería de prompts.
+Construir reporte de costos de LLM.
+Soportar personalización de narrativa."	"Documentar estrategias de realismo.
+Crear guías de mejores prácticas Comportamentales.
+Construir herramientas de monitoreo de coherencia.
+Soportar ajuste Comportamental."	"Documentar estándares de calidad.
+Crear procedimientos de validación.
+Construir herramientas de reporte de calidad.
+Soportar iniciativas de mejora de calidad."
+M3.3: Excelencia Operacional	___	"Crear playbooks de solución de problemas de narrativa.
+Construir procedimientos de emergencia de narrativa.
+Implementar monitoreo de salud de narrativa.
+Documentar mejores prácticas de narrativa."	"Crear playbooks de solución de problemas de primitivas.
+Construir procedimientos de mantenimiento de primitivas.
+Implementar monitoreo de salud de primitivas.
+Documentar proceso de actualización de primitivas."	"Crear playbooks de solución de problemas de acciones.
+Construir procedimientos de mantenimiento de acciones.
+Implementar monitoreo de confiabilidad de acciones.
+Documentar proceso de actualización de acciones."	"Crear playbooks de solución de problemas de LLM.
+Construir procedimientos de gestión de costos de LLM.
+Implementar monitoreo de rendimiento de LLM.
+Documentar estrategias de optimización de LLM."	"Crear playbooks de solución de problemas de realismo.
+Construir procedimientos de ajuste Comportamental.
+Implementar sistemas de monitoreo de realismo.
+Documentar mejores prácticas de realismo."	"Completar runbooks de validación.
+Crear procedimientos de respuesta a incidentes de calidad.
+Implementar sistemas de monitoreo de calidad.
+Documentar procesos de aseguramiento de calidad."
+M3: Escala y Operaciones de Producción	___	"Sistema de narrativa auto-mejorable aprendiendo desde personas exitosas y adaptándose a cambios de plataforma."	"Biblioteca de primitivas de nivel de producción con alta confiabilidad e implementaciones optimizadas para plataforma."	"Acciones atómicas altamente confiables (< ___% tasa de fallo) con recuperación completa de errores."	"Sistema de LLM optimizado con selección de modelo rentable, caché agresivo y posible afinamiento."	"Patrones Comportamentales indistinguibles de usuarios reales con evolución de largo plazo y diversidad única de persona."	"Aseguramiento de calidad automatizado con pruebas A/B e intervención humana mínima (< ___ horas/semana)."
+Proyecto: Persona - Sistema de Inteligencia de Panel Automatizado	COMPLETADO	"Generación de narrativa impulsada por IA creando patrones de actividad realistas y diversos que evolucionan naturalmente a lo largo del tiempo."	"Primitivas Comportamentales completas habilitando interacciones auténticas entre todas las plataformas y tipos de contenido."	"Biblioteca robusta de acciones atómicas ejecutando interacciones complejas con imperfecciones similares a humanos y adaptabilidad."	"Integración de IA optimizada para producción generando narrativas coherentes con costo mínimo y realismo máximo."	"Capa sofisticada de realismo creando patrones Comportamentales indistinguibles de usuarios humanos auténticos."	"Validación automatizada y aseguramiento de calidad requiriendo supervisión humana mínima mientras se mantienen altos estándares."

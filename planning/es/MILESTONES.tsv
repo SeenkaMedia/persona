@@ -1,0 +1,81 @@
+Hito	Fecha Objetivo	Infraestructura de Captura	Inteligencia Comportamental	Operaciones y Monitoreo	Plataformas	Pruebas, Integración, Recursos y Riesgo
+M1.1: Configuración de Infraestructura y Datos	___	"Configurar GKE
+PostgreSQL
+Proxies
+Fingerprinting básico"	"Definir modelos de datos
+Plantillas de programación"	"Configurar Firestore
+GCS
+Monitoreo básico"	"Configurar entorno de automatización de TikTok"	"Definir formatos
+Controles de acceso
+Registro de auditoría
+Roles del equipo"
+M1.2: Automatización y Comportamiento Central	___	"Desplegar contenedores
+Lógica de proxy
+Fundamentos anti-detección"	"Construir primitivas
+Acciones atómicas
+Ejecución de narrativas"	"Implementar logging
+Pipeline de capturas de pantalla"	"Implementar navegación TikTok
+Detección de anuncios"	"Procedimientos de revisión manual
+Pruebas de integración"
+M1.3: Integración y Validación	___	"Probar estabilidad
+Validar proxies
+Medir costos"	"Validar primitivas
+Evaluar intervención humana"	"Validar integridad de datos
+Calcular costos"	"Medir tasa de captura de anuncios
+Validación de precisión"	"Completar validación
+Estimaciones de costos
+Documentación de incidentes"
+M1: Fundamentos y Prueba de Concepto	___	"Infraestructura funcionando con anti-detección básica"	"Sistema Comportamental fundamental con primitivas centrales"	"Monitoreo básico y pipeline de datos desplegado"	"Automatización TikTok y captura de anuncios funcionando"	"Factibilidad técnica e integración validadas"
+M2.1: Expansión de Plataformas	___	"Agregar emulación móvil
+Escalar GKE para multi-plataforma"	"Adaptar primitivas para Instagram
+YouTube
+Facebook"	"Extender monitoreo para actividad multi-plataforma"	"Lanzar Instagram
+YouTube
+Automatización Facebook"	"Validar precisión entre plataformas"
+M2.2: IA y Comportamiento Avanzado	___	"Perfiles enriquecidos
+Hogares
+Auto-escalado
+Anti-detección avanzada"	"Narrativas LLM
+Coherencia cross-platform
+Grafos de interés"	"Event sourcing
+BigQuery
+Elasticsearch
+Optimización de costos"	"Expandir acciones de engagement entre plataformas"	"Establecer objetivos
+Deduplicación
+Respuestas automatizadas"
+M2.3: Monitoreo y APIs	___	"Dashboards de salud de contenedores
+Alertas de detección"	"Dashboard de validación de IA
+Métricas Comportamentales"	"Construir dashboards
+APIs
+Reportes internos"	"Monitoreo específico por plataforma
+Seguimiento de métricas"	"Capa de API
+Estándares de esquema
+Planificación de recursos"
+M2: Multi-Plataforma e Inteligencia	___	"Móvil+escritorio con hogares y anti-detección avanzada"	"Narrativas IA con primitivas comprehensivas y automatización"	"Dashboards, APIs, analytics y primeros reportes operacionales"	"Automatización multi-plataforma con comportamiento coherente"	"Calidad de IA validada e integración Stream A iniciada"
+M3.1: Escalar Infraestructura	___	"Escalar a producción
+Rotación de cuentas
+Granjas de dispositivos
+Hogares"	"Narrativas auto-mejorantes
+Alta confiabilidad
+Optimización de costos"	"Observabilidad completa
+Seguimiento SLA
+Pipeline de producción"	"Todas las plataformas listas para producción"	"Validación automatizada
+Benchmarking
+Procedimientos QA"
+M3.2: Entregables al Cliente	___	"Gestión de ciclo de vida
+Dashboards de cuentas"	"Documentación de patrones Comportamentales"	"Dashboards cliente
+APIs
+Reportes automatizados
+Alertas"	"Características orientadas al cliente en todas las plataformas"	"Validar entregables
+Recopilar feedback"
+M3.3: Excelencia Operacional	___	"Rotación automatizada
+Recuperación ante desastres
+Runbooks"	"Intervención mínima
+Docs de troubleshooting"	"Runbooks
+Respuesta a incidentes
+Cumplimiento
+Kill switches"	"Procedimientos operacionales específicos por plataforma"	"Almacén unificado
+Integración de sistemas
+Capacitación"
+M3: Escala y Operaciones de Producción	___	"Escala de producción con gestión automatizada"	"IA auto-mejorante con intervención mínima"	"Observabilidad completa con APIs cliente y excelencia operacional"	"Todas las plataformas listas para producción y expandibles"	"Validación de producción con integración completa y cumplimiento"
+Proyecto: Persona - Sistema de Inteligencia de Panel Automatizado	COMPLETADO	"Infraestructura escalable con anti-detección automatizada"	"Comportamiento realista impulsado por IA con intervención humana mínima"	"Monitoreo comprehensivo con entregables al cliente e integraciones"	"Automatización multi-plataforma confiable"	"Capacidades de inteligencia validadas con cumplimiento establecido"
